@@ -1,0 +1,125 @@
+body {
+   font-family: 'Arial', sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #141212;
+}
+
+main {
+   background-image: linear-gradient(34deg, white, blue);
+   max-width: 600px;
+   margin: 50px auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-div {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.title-div h1 {
+   color: #333;
+   font-size: 28px;
+}
+
+#question-count {
+   background-color: #b2bdb3;
+   color: #fff;
+   padding: 5px 10px;
+   border-radius: 4px;
+   /* Border radius for question count */
+}
+
+.progressbar-div {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 20px;
+}
+
+#question-count,
+#score {
+   font-size: 18px;
+   color: #333;
+   border-radius: 4px;
+   /* Border radius for score */
+}
+
+#score {
+   font-size: 18px;
+   color: #333;
+   background-color: #b2bdb3;
+   padding: 5px 10px;
+   border-radius: 4px;
+   /* Border radius for score */
+}
+
+.content-div {
+   margin-top: 20px;
+   text-align: left;
+
+}
+
+.content-div>div {
+   margin-bottom: 10px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+}
+
+input[type="radio"] {
+   margin-right: 8px;
+}
+
+label {
+   color: #333;
+   cursor: pointer;
+   display: block;
+}
+
+button,
+#next-button {
+   padding: 10px 20px;
+   font-size: 16px;
+   background-color: #4caf50;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   /* Border radius for buttons */
+   cursor: pointer;
+   margin-top: 10px;
+}
+
+button:hover,
+#next-button:hover {
+   background-color: #45a049;
+}
+
+.actions-div {
+   text-align: center;
+   margin-top: 20px;
+}
+
+#start-button {
+   display: block;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+
+/* Quiz Result Styles */
+#content>div {
+   text-align: center;
+   display: flex;
+   align-items: flex-start;
+   justify-content: start;
+   height: 15px;
+}
+
+#content h1 {
+   color: #4caf50;
+   font-size: 24px;
+   margin-top: 10px;
+}

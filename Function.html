@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script type="text/javascript">
+        function print10numbers () {
+          for( var i=0;i<10;i++){
+            console.log(i);
+          }
+        }
+       console.log("******First call******");
+       print10numbers();
+       console.log("******Second Call************");
+       print10numbers();
+       console.log("*******Third Call*********");
+       print10numbers();
+
+    </script>
+    <br>
+    <script>
+        function zipre(){
+            for (var a=1;a<=500;a++ ){
+                document.write("I Miss You Zipreeeeeeeeeeeee"+"<br>");
+            }
+        };
+        zipre();
+    </script>
+    <script>
+        function hello(){
+            document.write(" dear");
+        }
+        hello();
+        hello();        hello();   hello();   hello();   hello();   hello();
+
+    </script>
+<br> <h1>Function Parameter</h1>
+    <script>
+        function hello(frame=" rana",Iname="ji"){ 
+            // yaha fname and lname parameter hai jinki value "rana" air ji hai 
+            document.write(" Hi " + frame+" "+Iname +"<br>" );
+            // yaha hame jis format me output chaheye us format me hum paramter ko use karke likh sakte hai. 
+         }
+function sum(a,b)
+// ye humne dusra function bananya hai 
+{
+ // yaha fname and lname parameter hai jinki value "rana" air ji hai 
+           
+    document.write(a+b +" <br>");
+       // yaha hame jis format me output chaheye us format me hum paramter ko use karke likh sakte hai. 
+         
+}
+sum(10,555)
+
+// yaha hum ek kisi b value ki direct sum kr sakte hai . hume just value put krni hogi function ka nam leke. 
+sum(10,20);
+         hello( " Salmam","khan");
+
+         hello('pinky','kkkkk')
+    </script>
+ 
+ <br>
+
+<script>
+    function rana(riya="wife",priya='girlfriend'){
+        document.write(riya+" "+priya)
+    }
+    rana("kajal","laxmi" +"<br>");
+     
+    rana("pooja","shruti"+"<br>");
+   function add(a,b){
+    document.write(a+b);
+   }
+   add(12,22,"<br>")
+   add(12,26+"<br>")
+   rana('you','me')
+</script>
+<br><br>
+<script>
+    function you(Simon){
+        prompt("Enter your name!" + "<br>");
+        document.write("hello dear"+ Simon)
+    }
+    you();
+</script>
+
+<br>
+<h1>  Return function  </h1>
+
+<script>
+
+    function fullname (name="Pankaj", surname="Khanderao", city="Akola"+'<br>'){
+var a=name +" - "+ surname + " - " + city;
+
+return a;
+    }
+var fn=fullname("Pappu","pajer",'Banglore'+ "<br>")
+var jk=fullname('Rahul','girja','ganga');
+var jk=fullname('paaro','Zero','Heero');
+document.write(fn);
+document.write(jk);
+
+    </script>
+<br><br>
+    <script>
+
+        function sum( eng,hindi,mar){
+            var sub= eng+hindi+mar;
+            return sub;
+        }
+
+        function percentage(tt){
+         var per=tt/300*100;
+         document.write(per);
+        }
+
+       var total= 
+       sum(50,64,54);
+percentage(total);
+    </script>
+<br><br>
+
+
+
+
+
+    <script>
+function greet(name){
+console.log("Hello "+ name + ":)");
+}
+let nam = prompt("Enter your name:");
+greet(nam);
+    </script>
+
+    <Script>
+        function nam_likho (hobby){
+        document.write( "My hobbi is " + hobby);
+        
+        }
+        nam_likho();
+    </Script>
+
+ <script>
+    function greet(nam) {
+        console.log("Hello " + nam + ":")
+        }
+        let naml = prompt("Enter a name: ");
+        greet(naml);
+</script> 
+<script>
+    function baby(priya){
+    console.log("Darling"+priya);
+    }
+    let priya = prompt("Enter your name");
+    baby(priya);
+</script>
+
+ <script>
+    let num1 = parseFloat(prompt("Enter first number"));
+let num2 = parseFloat(prompt("Enter second number"));
+
+ function add(num1,num2){
+  let a= num1+num2;
+return(a);
+ }
+let results =add (num1,num2);
+console.log( results);
+
+</script> 
+<br>
+
+<script>
+
+let a= prompt("Tell me your frst name");
+let b= prompt("Tell me your Second name");
+
+function fullname( a, b){
+    let c = ("Hello " +a+" - "+ b);
+return (c);
+}
+let d= fullname(a,b);
+
+console.log(d)
+
+</script> 
+
+<br>
+ <script>
+     let animal ={
+        name: ' Lion ',
+        color: ' Yello '
+     }
+    
+
+     let bird ={
+        name : ' Parrot ',
+        color : ' Green '
+     }
+
+     function print(){
+        console.log(this.name + this.color);
+     }
+     let print_animal = print.bind(animal);
+     let print_bird = print.bind(bird);
+     print_animal();
+     print_bird();
+</script> 
+
+
+<!-- <script>
+    var x= 10;
+    function abc(){
+        let y =20;
+        console.log(" I ma inside abc with x = "+ x +" y = "+y);
+    function xyz() {
+        let z =30;
+        console.log(" I ma inside xyz with x = "+ x +" y = "+y+ "z =" +z);
+   
+    }
+    xyz();
+    }
+
+    abc();
+ 
+</script>  -->
+
+<!-- <br><h1>bindiing</h1><br> -->
+
+<!-- <script>
+   let animal = {
+    name: "rabbit",
+    run: function(speed){
+        document.write(this.name+ "run at" + speed +"mph");
+
+    }
+   }
+
+   let bird= {
+    name: "Eagle",
+    fly : function(speed){
+        document.write(this.name +"flies at"+ speed +"mph");
+    }
+   }
+
+   let fn = animal.run.bird(bind, 20);
+   fn();
+</script>
+
+<Script>
+    function value(){
+        // let a = prompt("Enter value");
+        if (a<10)
+        document.write("hello world")
+
+        else{
+            document.write("bye world")
+        }
+    }
+    value();
+</Script>
+<br>
+<script>
+
+// first function written
+
+  function identity (firstname="Pankaj",lastname="Khanderao"){
+    document.write("king of coding "+ firstname+ " "+lastname +"<br>");
+
+  }
+
+// second function written 
+
+  function addition (a,b){ 
+    document.write(a+b +"<br>");
+
+  }
+  addition(20,55);
+  identity();
+  identity("Akshay","Mahajan");
+  addition(25,546);
+  addition("me ","you");
+  addition();
+</script>
+
+<br>
+ <script>
+    function you(Simon){
+        prompt("Enter your name!");
+        document.write("hello dear");
+    }
+    you();
+
+</script> -->
+
+<!-- agar function k paramter ka nam same ya differnt chaheye toh  -->
+<!-- Return ka use kare  -->
+<!-- niche diya hai -->
+<br>
+<script>
+
+  function profile( name="Ravi Teja", movie= "dar"){
+    // yaha function k parameter ko naam diya
+    var a = (name + " first movie name "+movie)
+    // agr hame paramter ka nam same ya change krna hoga to hum use ek variable me store krte (ex var=a)
+    return (a);
+// return ki vajase he ham kabi bi nam change kr sakte hai 
+// islye hun a variable ki value return me store krte hai (ex= return(a))
+  }
+
+    var b=profile();
+
+    // fir hum call krte hai function ko  lekin 
+// return me direct call nhi hota hai 
+// islye function ko pehle use varibale me store krna padta hai
+// ex ( var b = profile())
+
+    document.write(b);
+// code ka out put  k liye hame command dene padti hai
+// ex(document.write(b)) us second variable ka nam
+    // second variable me store hone baad bb hame output nhi milta hai.
+
+</script>
+<br><br>
+ 
+<!-- above same output -->
+
+
+<script>
+
+    function profile( name="Ravi Teja", movie= "dar"){
+      var a = (name + " first movie name "+movie)
+      return (a);
+   }
+  
+      var b=profile();
+  
+      document.write(b+ "boss");
+  
+  </script>
+
+  <br><br>
+<script>
+ 
+function subject(hindi,english,mar,physic ,chemistry){
+    var a = hindi+ english+mar+physic+chemistry ;
+    return a;
+}
+var total=subject(99,98,96,96,94 );
+
+
+function nav (){
+var e= prompt("Enter your nick name ");
+return e;
+}
+var f= nav();
+
+
+function percentage(x){
+    var per= x/500*100;
+    return per;
+}
+var result =percentage(total);
+
+document.write("<b>" +  f+ " obtain marks "+ total+" and he got " +result + "%")
+</script>
+<br> 
+<script>
+let mobile ={
+    name: "Apple",
+    price: "50k",
+    camera: function(tu){
+        document.write(this.name +' cost for '+ this.price+hu);
+    }
+}
+let laptop ={
+    name : "lemovo", 
+    price :"5000",
+    processor: function(hu){
+        document.write(this.name +' cost for '+ this.price+tu); 
+    }
+}
+let device = laptop.processor.bind(mobile, "/- Only");
+device();
+
+</script>
+
+
+
+</body>
+</html>

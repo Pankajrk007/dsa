@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var j = [10, 20, 30, 50];
+        document.write(j + "<br>");
+        var l = j.filter(checkAdult);
+        document.write(l + "<br><br>");
+        function checkAdult() {
+            return l >= 18
+        }   
+    </script>
+    <script>
+        var e = ["ram", "kunal", "vishal", "sureesh"];
+        var s = e.indexOf("vishal");
+        var f = e.lastIndexOf("kunal", 1)
+        var h = e.includes("vishal");
+        document.write(e + "<br>");
+        document.write(s + "<br>");
+        document.write(f + "<br>");
+        document.write(h + "<br>");
+    </script>
+    <script>
+        var d = ["ram", "kunal", "vishal", "sureesh"];
+        var b = Array.isArray(d);
+        document.write(b + "<br>");
+    </script>
+    <script>
+        var clas = ["ram", "guj", "suj", "roh"];
+        document.write(clas);
+        clas.splice(2, 0, "neha", "gun");
+        document.write(clas + "<br>+<br>");
+    </script>
+    <script>
+        var ary = [10, 20, 30, 40, 50];
+
+        delete ary[2];
+        delete ary[4];
+        ary[0] = 15;
+        document.write("<ul>");
+        for (var a = 0; a < 5; a++) {
+            document.write("<li>" + ary[a] + "</li>");
+        }
+        document.write("<ul>");
+
+    </script>
+
+    <script>
+        var a = []
+        var a = new Array(10, 20, 30);
+        delete a[0];
+        a.pop();
+        a.push(52)
+
+    </script>
+    <script>
+        var ary = [
+            ["aohan", 22, "Male"],
+            ["boha", 22, "Male"],
+            ["cohn", 22, "Male"],
+            ["doan", 22, "Male"]
+        ];
+        ary[0][1] = "you";
+        ary.sort();
+
+        // modified arry 
+        document.write(a);
+        document.write("<table border=1px >")
+        for (a = 0; a < 4; a++) {
+            document.write("<tr>");
+
+            for (b = 0; b < 4; b++) {
+                document.write("<td>" + ary[a][b] + " ");
+            }
+            document.write("<br>");
+
+        }
+        document.write(b);
+
+        document.write(ary.length + " <br>");
+
+    </script>
+    <br>
+    <script>
+        var name = ["Rahul", "shub", "laksh", 'Ram'];
+        // var you = name.concat("pankaj");
+        var kk = ["raju", "ERjj"];
+        var k = ["raju", "ERjj"];
+        var c = name.concat(kk, k);
+        document.write(c);
+
+    </script>
+
+    <script>
+   var myArray = ["apple", "orange", "banana", "grape"];
+myArray.sort(function(a, b) {
+  return a.localeCompare(b);//ascending order
+});
+
+console.log(myArray);
+
+
+    </script>
+<script>
+    var myArray = ["apple", "orange", "banana", "grape"];
+myArray.sort(function(a, b) {
+  return b.localeCompare(a); //decending
+});
+
+console.log(myArray);
+
+</script>
+    <script>
+           var myArrays = [23, 34, 5456, 12, 34, 51];
+myArrays.sort(function(a, b) {
+  return a - b; //ascrnding order for decending b-a
+});
+
+console.log(myArrays);
+    </script>
+
+<!-- agar numbeer aur string dono hai toh  -->
+<script>
+    var myArray = ["apple", "orange", 22, 55, 66, "banana", "grape"];
+myArray.sort(function(a, b) {
+  if (typeof a === 'string' && typeof b === 'string') {
+    return a.localeCompare(b);
+  } else if (typeof a === 'number' && typeof b === 'number') {
+    return b - a; // Descending order for numbers
+  } else {
+    // Handle other cases (you can decide the logic)
+    return 0;
+  }
+});
+
+console.log(myArray);
+
+</script>
+</body>
+
+</html>

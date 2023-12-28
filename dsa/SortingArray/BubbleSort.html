@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+<body>
+    <script>
+
+        function bubbleSort(arr){
+            const n= arr.length;
+            let swapped;
+
+            do {
+                swapped=false;
+                for (let i = 0; i < n - 1 ;i++){
+                    if (arr[i] > arr[i+1]){
+                        [ arr[i] , arr[i+1] ]=[ arr[ i + 1 ],arr[ i ] ];
+                        swapped = true;  
+
+                    }
+                }
+            }while(swapped);
+            return arr;
+
+
+
+        }
+
+        const unsortedArray =[5,3,6,3,2,3,1];
+        console.log(unsortedArray);
+
+        const sortedArray =bubbleSort(unsortedArray);
+       
+        console.log(sortedArray);
+    </script>
+
+    <script>
+        function selectionSort(arr) {
+    const n = arr.length;
+
+    for (let i = 0; i < n - 1; i++) {
+        // Assume the current element is the minimum
+        let minIndex = i;
+
+        // Search for the minimum element in the unsorted portion
+        for (let j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        // Swap the minimum element with the current element (if necessary)
+        if (minIndex !== i) {
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        }
+    }
+
+    return arr;
+}
+
+const unsortedArrayy = [64, 25, 12, 22, 11];
+const sortedArrayy = selectionSort(unsortedArrayy);
+
+console.log(sortedArrayy); // Output: [11, 12, 22, 25, 64]
+
+    </script>
+</body>
+</html>

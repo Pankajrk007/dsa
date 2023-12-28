@@ -1,0 +1,28 @@
+.container{
+    background-color: black;
+    color: darkgray;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    border-radius: 0.3rem;
+    /* margin: 0px;
+    padding: 0px; */
+    margin-left:300px ;
+    margin-top: 100px;
+}
+
+.title {
+    font-size: x-small;
+    padding: 0px;
+
+}
+h1{
+height: 30px;
+padding-top: 10px;
+}
+#buttons{
+padding-top: 20px;
+}
+span{
+    font-size: x-large;
+}

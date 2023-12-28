@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+  <h4>Write a Program tofind two array elements in an arraythat add up to a numberExample:- Input:    arr = [1,9,0,7,5], 10Output: 1, 9</h4>
+    <script>
+      // koi array hai usme se koi 2 value ka sum 30,40 xyz hota hai toh ye findsum function use hoga 
+function findSumPair(arr,targetSum){
+  for (var i =0, arrLength=arr.length;i<arrLength;i++){
+    for (var j =i+1; j<arrLength;j++){
+      if (arr[i]+arr[j]===targetSum){
+        return [arr[i],arr[j]];
+      }
+    }
+  }
+  return null;
+}
+
+
+const inputArray = [1,9,0,7,5];
+const targetSum = 12;
+ const result= findSumPair(inputArray,targetSum);
+ if (result!==null){
+document.write(`output : ${result[0]},${result[1]} `+ "<br>" )
+document.write("or directly bhi likh sakte ho result likh sakte ho output same hoga " + "<br>"+ "output : "+result)
+ }
+ else{
+  document.write("No Pair found...")
+ }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

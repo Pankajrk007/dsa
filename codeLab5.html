@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interview question Code Lab-5</title>
+</head>
+<body>
+
+<!-- REduce method in Array  -->
+
+
+<script>
+    const myArray = [1,2,3,4,5];
+    const reduceValue = myArray.reduce(reducefunctio,{
+    sum: 0,
+    prodcut: 1,
+    min : Infinity,
+    max : -Infinity,
+    }
+    );
+
+    function reducefunctio(accumulator,currentValue) {
+ return{
+    sum: accumulator.sum +currentValue,
+    prodcut : accumulator.prodcut * currentValue,
+    min : accumulator.min < currentValue ? accumulator.
+    min :currentValue,
+    max : accumulator.max > currentValue ? accumulator.
+    max :currentValue,
+ }
+
+    }
+  console.log(reduceValue);
+</script>
+
+
+
+
+<!-- Anagram Question (ex: race : care  )matlb same alphabet hote hai  -->
+<!-- 
+<script>
+    const str1 = "abcd";
+    const str2 = "abcd";
+
+function sortStringARC(s){
+    return s.split("").sort().join("");
+}
+console.log(str1,"and",str2,
+sortStringARC(str1)===sortStringARC(str2)
+? "are anagrams" : "are Not anagrams");
+</script> -->
+
+
+
+
+
+<!-- Palindrome question  -->
+  
+<!-- <script>
+    const str = "racecar";
+        function reverseStringValue (s,seperator){
+            return s.split(seperator).reverse().join(seperator);
+        }
+        let reverseStr = reverseStringValue(str, "");
+        console.log(
+            str,
+            str ===reverseStr ? "is a Palindrome" : " is not Palindrome"
+        )
+</script> -->
+
+
+
+//      reverse string to whole sentence 
+
+
+//     <script>
+//         let str = "Welcome to skill academy";
+//         let reverseStr = "";
+//         function reverseStringValue (s,seperator){
+//             return s.split(seperator).reverse().join(seperator);
+
+//         }
+//         let tempstr = reverseStringValue(str,"");
+//         reverseStr =reverseStringValue(tempstr," ");
+//         console.log(tempstr);
+//         console.log(reverseStr);
+//     </script> 
+  
+  
+//     <script>
+
+//         reverse string 
+//         let str ="welcome";
+// str= str.split("").reverse().join("")
+//         console.log(str)
+// split array me karega reverse ulta karega join usko string me karega 
+// or 
+
+//         let str ="welcome";
+//       let reverse ="";
+//       reverse = str.split("").reverse()
+//       console.log(reverse);
+//         </script>
+
+
+
+
+//      <h1>fizz buzz</h1>
+//   <script>
+//         console.log("hi dearr")
+
+//         for (let index = 1; index <= 100; index++) {
+// if (index % 3 ===0 && index % 5 ===0){
+// console.log("fizzBuzz")
+// }
+
+//         else if  (index % 3 ===0){
+//             console.log("fizz")
+//         }
+//         else if(index % 5 ===0){
+//             console.log("buzz")
+//         }
+//         else{
+//             console.log(index)
+//         }
+//         }
+          
+
+//     </script>
+
+
+</body>
+</html>

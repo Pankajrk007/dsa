@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // directly targeting on the number 
+        function oddEven(num) {
+            for (let i = 0; i <= num; i++) {
+                if (num == 0) {
+                    console.log("Number  is even : " + num)
+
+                }
+                else if (num % 2 === 0) {
+                    console.log("Number  is even : " + num)
+                } else {
+                    console.log("Number  is odd : " + num)
+
+                }
+            }
+        }
+        oddEven(0);
+
+
+        console.log("======or check each index number =======")
+        function evenOrOddNum(n) {
+             for (var i = 0; i <= n; i++) {
+                 if (i === 0) {
+                     console.log(i + " is even"); 
+                    } else if (i % 2 === 0) { 
+                        console.log(i + " is even"); 
+                    } else { 
+                        console.log(i + " is odd"); } }}
+                        evenOrOddNum(3);
+
+//                         Iteration 0: i is 0, so it enters the first condition and prints "Iteration 0: Number is even: 0". After that, i is incremented by 1 to become 1.
+
+// Iteration 1: i is 1, so it enters the second condition and prints "Iteration 1: Number is odd: 1". After that, i is incremented by 1 to become 2.
+
+// Iteration 2: i is 2, so it enters the second condition and prints "Iteration 2: Number is even: 2". After that, i is incremented by 1 to become 3.
+
+// Iteration 3: i is 3, so it enters the second condition and prints "Iteration 3: Number is odd: 3". After that, i is incremented by 1 to become 4.
+
+// Iteration 4: i is 4, so it enters the second condition and prints "Iteration 4: Number is even: 4". After that, i is incremented by 1 to become 5.
+
+// Iteration 5: i is 5, so it enters the second condition and prints "Iteration 5: Number is odd: 5". After that, i is incremented by 1 to become 6.
+
+// The loop continues until i is greater than n (in this case, 6). Each time, it prints the result based on whether i is even or odd, along with the current iteration number.
+    
+
+    </script>
+</body>
+
+</html>

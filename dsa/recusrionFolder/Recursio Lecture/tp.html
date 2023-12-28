@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recursive tp</title>
+</head>
+
+<body>
+
+
+    <script>
+        //   Recursive upstair
+        //                ______2
+        //         ______|  
+        //  0 _____|
+
+
+        function f(i, path, di) {
+            if (i > di) {
+                return
+            }
+            if (i === di) {
+                document.write(path)
+                console.log(path)
+                return;
+            }
+            f(i + 1, path + 1, di)
+            f(i + 2, path + 2, di)
+            f(i + 3, path + 3, di);
+        }
+        f(0, "", 3)
+
+
+// output is  
+// 111
+//  12
+//  21
+//  3
+</script>
+</body>
+
+</html>

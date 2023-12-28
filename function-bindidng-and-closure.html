@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Binding and Closure</title>
+</head>
+<body>
+    <h1>JavaScript Function bind()</h1>
+    <p>person and member are two objects.</p>
+    <p>The member object borrows the fullname method form person</p>
+    <p id="demo"></p>
+<script>
+    let person={
+        firstname: "Pankaj",
+        lastname:"Khanderao",
+        fullname : function(){
+        document.write( this.firstname + " " + this.lastname); 
+        } 
+    }
+    
+    let member={
+        firstname: "Hege",
+        lastname:"Nilson",
+        commity : function(){
+        document.write( this.firstname + " " + this.lastname); 
+        } 
+    }
+    
+    let you= member.commity.bind(member);
+    document.getElementById("p.demo").innerHTML=you();
+    
+</script>
+
+ <h1>The JavaScript <i>this</i> Keyword </h1>
+<p>In this example, <b>this</b> refers to the <b>person</b> object.</p>
+<p>Because <b>fullName</b>is a method of the person object.</p>
+
+
+<script>
+
+    const person ={
+     firstname: "John",
+     lastname: "Doe",
+     fullName : function (x){
+        document.write(this.firstname+ " "+ this.lastname);
+     }
+    }
+    let me = person.fullName.bind(person);
+    document.getElementById("demo").innerHTML=me();
+    </script> -->
+
+
+<!-- <script>
+document.getElementById("demo").innerHTML = myFunction();
+function myFunction(){
+    return this;
+    }
+</script> -->
+
+<!-- 
+<script>
+let x = this;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+
+<h3>Add your To Do List here</h3>
+<form id="myForm">
+    <input id="myInput" type="text">
+    <button> Add </button>
+</form>
+<h3>To Do List</h3>
+<ul id="myItem"></ul>
+<script>
+var myForm = document.getElementById("myForm");
+var myInput = document.getElementById("myInput");
+var myItem = document.getElementById("myItem");
+
+myForm.addEventListener("submit",
+function(event){
+    event.preventDefault()
+    createItem(myInput.value)
+})
+function createItem(inputItems){
+    var items = `<li>${inputItems}
+    <button onclick="deleteElement(this)">Delete</button> 
+</li>
+`myItem.insertAdjacentHTML("beforeend", items)
+myInput.value = ""
+myInput.focus()
+}
+function deleteElement(ElementToDelete){
+    ElementToDelete.parentElement.remove()
+}
+</script> -->
+
+
+<button onclick="hello()">click me</button>
+
+<script>
+    function hello(){
+        prompt("hello everyone");   
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Write a Program to print the sum of digits of a number N using a recursivemethod.</h4>
+
+    <script>
+        function countDigit(n){
+            
+            if(n==0)
+            return 0;
+        return( n % 10+ countDigit(parseInt(n/10)));
+
+        }
+        let num = 123;
+        var result = countDigit(num);
+document.write(result +": Sum of digits in a number")
+
+
+
+// Certainly! Let's break down the recursive function and create a table to show each iteration:
+
+// ```javascript
+// function countDigit(n) {
+//     if (n == 0) {
+//         return 0;
+//     }
+//     return (n % 10) + countDigit(parseInt(n / 10));
+// }
+
+// let num = 123;
+// var result = countDigit(num);
+// document.write(result + ": Sum of digits in a number");
+// ```
+
+// Now, let's create a table to show the breakdown of each iteration:
+
+// | Iteration | Current Number (n) | Last Digit (n % 10) | Remaining Digits (parseInt(n / 10)) | Sum So Far |
+// |-----------|---------------------|----------------------|-------------------------------------|------------|
+// | 1         | 123                 | 3                    | 12                                  | 3          |
+// | 2         | 12                  | 2                    | 1                                   | 5          |
+// | 3         | 1                   | 1                    | 0                                   | 6          |
+// | 4         | 0                   | 0                    | -                                   | 6 (Base Case) |
+
+// In each iteration, the function extracts the last digit of the current number, updates the remaining digits, and adds the last digit to the sum so far. The recursion continues until the base case is reached, which is when `n` becomes 0. The final sum is then returned.
+
+</script>
+</body>
+</html>

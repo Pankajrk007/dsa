@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason</title>
+</head>
+<body>
+
+    <!-- first jason example -->
+ <h1>   
+   Jason
+</h1>
+<p id="demo"></p>
+    <script>
+        const jobject = '{"name": "Rana","age": 18, "car": "BMW"}';
+        const details = JSON.parse(jobject);
+        document.getElementById("demo").innerHTML= details.name;
+        document.getElementById ("demo").innerHTML= details.car;
+            </script>
+
+            <!-- second basic jaosn example-->
+        <script>
+            const sport = ' { "cricket" : "Dhoni", "football": "Ronaldo"}';
+            const player = JSON.parse(sport);
+document.getElementById("demo").innerHTML=player.football;
+        </script>
+
+<script>
+    // Creating JASON object 
+
+    const create_jaosn_objet_name_of_state = { "Maharashtra": "Mumbai",
+                                                "punjab" : " Chandigarh",
+                                                "pakistha": "Lahore",
+                                                "MP": "Bhopal"    };
+                                                document.write("<h1>Capital of Maharastra = "+ create_jaosn_objet_name_of_state.Maharashtra+ "</h1>")
+                                                   document.write("<h1>Capital of Punjab = "+ create_jaosn_objet_name_of_state.punjab+ "</h1>")
+                                                document.write("<h1>Capital of Mp = "+ create_jaosn_objet_name_of_state.MP+ "</h1>") 
+                                                document.write("<h1>Capital of pakisthan = "+ create_jaosn_objet_name_of_state.pakistha+ "</h1>")                                                               
+</script>
+        </body>
+</html>

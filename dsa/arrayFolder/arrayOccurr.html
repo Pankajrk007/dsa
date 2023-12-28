@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array function</title>
+</head>
+<body>
+    <script>
+        // n=[623456691];
+        //d=6 means find d =6 means how many times 6 occur in array;
+
+       let n = 33211313564;
+       let target = 3;
+       count =0;
+       function counter (n , target){
+        while(n>0){           //aagr n 0 se bada hai toh
+    let lastDigit = n % 10;   // hum yaha last digit check  kara rhe hai
+         if (lastDigit==target){      //agar last digit target k same hai toh count hoga
+         count++;                     // jitne bar digit same milega ye utne bar count karega
+        }
+            n=Math.floor(n/10);     // fir jo last digit count kiya hai use ye remove kareaga
+         
+       }
+       return count;               // ye humkko total same target batayega
+
+    }
+    console.log(counter(n,target))   //output dikhaeyega
+     
+
+
+  
+    
+    </script>
+</body>
+</html>

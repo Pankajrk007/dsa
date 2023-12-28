@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Write a Program to print the product of even numbers from 1 to N where N is thenumber inputted by the user.</h4>
+<script>
+    function evenProduct (n){
+        let even =1;
+        for ( let i =1; i<=n;i++){
+            if (i%2==0){
+                even*=i;
+            }
+        }
+        document.write("even numbers product : " + even + "<br>")
+    }
+    let n =6;
+    evenProduct(n);   // output is 48
+
+
+//     Certainly! Here's the modified table with the even number values included:
+
+// | Iteration | Current Number | Is Even? | Current Product | Even Number Values |
+// |-----------|----------------|-----------|------------------|--------------------|
+// | 1         | 1              | No        | 1                |                    |
+// | 2         | 2              | Yes       | 2                | 2                  |
+// | 3         | 3              | No        | 2                |                    |
+// | 4         | 4              | Yes       | 8                | 4                  |
+// | 5         | 5              | No        | 8                |                    |
+// | 6         | 6              | Yes       | 48               | 6                  |
+
+// Now, in the "Even Number Values" column, I've included the even numbers encountered at each iteration.
+
+</script>
+</body>
+</html>

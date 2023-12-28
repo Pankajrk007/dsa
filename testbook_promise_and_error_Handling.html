@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testbook Promise and Error handling - Pratice code</title>
+    <linkhref="https: //cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        </linkhref>
+
+        <style>
+            body {
+                height: 100%;
+                background-image: linear-gradient(to left, red, white);
+                font-family: "monteserrat", Arial, Helvetica, sans-serif;
+            }
+        </style>
+</head>
+
+<body>
+    <!-- Write a javascript file to implement anews app by using the following ap i= ‘https://inshorts.deta.dev/news?category = all‘. Also add a catch statement if any error is encountered while fetching the api -->
+    <!-- <div class="container">
+    <h1>
+        Fetching and 
+        Displaying News
+    </h1>
+    <table id="table" class="table">
+
+    </table>
+</div>
+
+
+<script>
+    var a= [
+    {"id": 1, "name": "John Doe", "age": 28, "gender": "Male", "city": "New York"},
+    {"id": 2, "name": "Jane Smith", "age": 25, "gender": "Female", "city": "Los Angeles"},
+    {"id": 3, "name": "Bob Johnson", "age": 35, "gender": "Male", "city": "Chicago"},
+    {"id": 4, "name": "Alice Williams", "age": 30, "gender": "Female", "city": "Houston"},
+    {"id": 5, "name": "David Brown", "age": 40, "gender": "Male", "city": "Miami"},
+    {"id": 6, "name": "Emma Davis", "age": 22, "gender": "Female", "city": "San Francisco"},
+    {"id": 7, "name": "Michael Wilson", "age": 32, "gender": "Male", "city": "Seattle"},
+    {"id": 8, "name": "Olivia Miller", "age": 27, "gender": "Female", "city": "Austin"},
+    {"id": 9, "name": "William Jones", "age": 45, "gender": "Male", "city": "Boston"},
+    {"id": 10, "name": "Sophia Davis", "age": 29, "gender": "Female", "city": "Denver"},
+    {"id": 11, "name": "James White", "age": 33, "gender": "Male", "city": "Portland"},
+    {"id": 12, "name": "Ava Taylor", "age": 26, "gender": "Female", "city": "Phoenix"},
+    {"id": 13, "name": "Ethan Anderson", "age": 31, "gender": "Male", "city": "Dallas"},
+    {"id": 14, "name": "Mia Brown", "age": 24, "gender": "Female", "city": "Atlanta"},
+    {"id": 15, "name": "Daniel Martin", "age": 38, "gender": "Male", "city": "Detroit"},
+    {"id": 16, "name": "Chloe Thompson", "age": 23, "gender": "Female", "city": "Minneapolis"},
+    {"id": 17, "name": "Christopher Clark", "age": 36, "gender": "Male", "city": "Philadelphia"},
+    {"id": 18, "name": "Emily Turner", "age": 28, "gender": "Female", "city": "Charlotte"},
+    {"id": 19, "name": "Andrew Harris", "age": 34, "gender": "Male", "city": "San Diego"},
+    {"id": 20, "name": "Grace Moore", "age": 31, "gender": "Female", "city": "Las Vegas"},
+    {"id": 21, "name": "Jackson Wilson", "age": 40, "gender": "Male", "city": "Houston"},
+    {"id": 22, "name": "Lily Garcia", "age": 29, "gender": "Female", "city": "New York"},
+    {"id": 23, "name": "Nathan Rodriguez", "age": 27, "gender": "Male", "city": "Los Angeles"},
+    {"id": 24, "name": "Avery Johnson", "age": 25, "gender": "Female", "city": "Chicago"},
+    {"id": 25, "name": "Sofia Martinez", "age": 33, "gender": "Male", "city": "Miami"},
+    {"id": 26, "name": "Carter Thomas", "age": 22, "gender": "Female", "city": "San Francisco"},
+    {"id": 27, "name": "Ella Jackson", "age": 36, "gender": "Male", "city": "Seattle"},
+    {"id": 28, "name": "Owen Taylor", "age": 30, "gender": "Female", "city": "Austin"},
+    {"id": 29, "name": "Aria Adams", "age": 28, "gender": "Male", "city": "Boston"},
+    {"id": 30, "name": "Isaac Cooper", "age": 31, "gender": "Female", "city": "Denver"},
+    {"id": 31, "name": "Mila Evans", "age": 26, "gender": "Male", "city": "Portland"},
+    {"id": 32, "name": "Gabriel Moore", "age": 34, "gender": "Female", "city": "Phoenix"},
+    {"id": 33, "name": "Hudson Parker", "age": 29, "gender": "Male", "city": "Dallas"},
+    {"id": 34, "name": "Scarlett Harris", "age": 25, "gender": "Female", "city": "Atlanta"},
+    {"id": 35, "name": "Logan Clark", "age": 38, "gender": "Male", "city": "Detroit"},
+    {"id": 36, "name": "Zoe Turner", "age": 23, "gender": "Female", "city": "Minneapolis"},
+    {"id": 37, "name": "Lucas Garcia", "age": 36, "gender": "Male", "city": "Philadelphia"},
+    {"id": 38, "name": "Aubrey Moore", "age": 28, "gender": "Female", "city": "Charlotte"},
+    {"id": 39, "name": "Henry Harris", "age": 34, "gender": "Male", "city": "San Diego"},
+    {"id": 40, "name": "Emma Moore", "age": 31, "gender": "Female", "city": "Las Vegas"},
+    {"id": 41, "name": "Liam Wilson", "age": 40, "gender": "Male", "city": "Houston"},
+    {"id": 42, "name": "Ava Garcia", "age": 29, "gender": "Female", "city": "New York"},
+    {"id": 43, "name": "Mason Rodriguez", "age": 27, "gender": "Male", "city": "Los Angeles"},
+    {"id": 44, "name": "Madison Johnson", "age": 25, "gender": "Female", "city": "Chicago"},
+    {"id": 45, "name": "Elijah Martinez", "age": 33, "gender": "Male", "city": "Miami"}]
+
+  
+    fetch("a")
+    .then(res => res.json()).then(json => {
+        json=json.data;
+        let table = document.getElementById('table');
+        for (let i= 0; i<json.length;i++){
+            let obj =json[i];
+            console.log(obj);
+            let row = document.createElement('tr');
+            let author = document.createElement('td');
+            let content = document.createElement('td');
+            author.innerHTML=obj.author;
+            content.innerHTML=obj.content;
+            row.appendChild(author)
+            row.appendChild(content)
+            table.appendChild(row)
+        }
+        console.log(json);
+
+    }).catch(error =>console.log(error));
+</script>
+
+<script>
+//                  Problem Statement 2: Harry Potter Character Name and Image
+//     Write a javascript file to display the harry potter character image and name after taking thecharacter’s name as input from the user using the followingapi=‘https://hp-api.herokuapp.com/api/characters/’andalsodisplayanyerrormessageifthe character is not found
+//
+
+
+
+</script> -->
+
+
+
+    <div class="container"><br>
+        <h1>Searching and Displaying Harry Potter Character Image</h1>
+        <hr>
+        <h2 id="h2"></h2><img id="image1" />
+        <table id="table" class="table"></table>
+    </div>
+    <script>
+    let str = prompt('Input Your Harry Potter Character Name', 'HarryPotter');
+     let url = 'https://hp-api.herokuapp.com/api/characters/';
+      fetch(url).
+      then(res => 
+      res.json())
+      .then(json => {
+         let val = json.find(o =>o.name === str);
+           console.log(val);
+            let img = document.getElementById('image1');
+             img.setAttribute('src', val.image);
+              let h2 = document.getElementById('h2');
+               h2.innerText = val.name;
+                })
+                .catch(error =>
+                 console.log(error))
+                 </script>
+</body>
+
+</html>

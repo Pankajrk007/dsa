@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <h1>Redeclaring a variable using var </h1>
+    <script>
+        var a ='hello';
+        var a ='hello js';
+        document.write(a);
+    </script>
+
+
+<h2>Javascript const</h2>
+<p>Declaring a constant array does NOT make the element unchangeable</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+    const fruits =['apple', 'banana','orange'];
+    document.getElementById('demo').innerHTML =fruits;
+    fruits[0] = 'aprioot';
+    fruits.push('Mango');
+    document.getElementById('demo1').innerHTML = fruits;
+</script>
+
+<h3>Redeclaing a variable using let</h3>
+<p id="rana"></p>
+
+<script>
+    let x ='hello';
+   {let x = 'hello js';}
+document.getElementById('rana').innerHTML =x;
+
+</script>
+
+<h3>Java script const</h3>
+<p id="pankaj"></p>
+<p id="pankaj2"></p>
+<script>
+    const mobile =['Apple', 'Samsung', 'oppo'];
+    document.getElementById('pankaj').innerHTML = mobile;
+    mobile [2]= "Oneplus";
+    mobile .push('Motto');
+    document.getElementById('pankaj2').innerHTML =mobile;  
+</script>
+
+
+
+<h1>just for trail</h1>
+<p id="big"></p>
+<p id="big1"></p>
+<script>
+    const name = ['Rana','Akshay','bala'];
+    document.getElementById('big').innerHTML =name;
+    
+        name [2] = 'Rohit';
+        name.push('sagar');
+        document.getElementById('big1').innerHTML =name; 
+    
+
+</script>
+
+<p id="one"></p>
+<p id="two"></p>
+<script>
+    const color =['red','blue','green'];
+    document.getElementById('one').innerHTML =color;
+    color[2]='white';
+    color.push('orange');
+    document.getElementById('two').innerHTML =color;
+</script>
+<br>
+
+
+
+<script>
+  var target= document.getElementById("one");
+  var new_element = "<h1> Advance js</h1>";
+  target.insertAdjacentHTML("beforebegin",new_element)
+
+</script>
+</body>
+</html>

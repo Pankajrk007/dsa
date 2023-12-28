@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Matrix</title>
+</head>
+<body>
+    
+<script>
+
+    function path(i,j,paths,di,dj){
+
+        if ( i>di  || j>dj){return
+        };
+        if (i==di && j==dj){
+            console.log(paths);
+            return
+        }
+      
+        // i =row, j= colmn, paths =jaha se ij traverse kar rahe , di destination row ,dj =destination column  
+        // horizantal path ho toh
+        path(i,j+1,paths+'h',di,dj);
+
+        // vetical path ho toh 
+        path(i+1,j,paths+'v',di,dj)
+    }
+
+    path(1,1,"",2,3)
+</script>
+</body>
+</html>

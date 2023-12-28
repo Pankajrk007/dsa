@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+</head>
+
+<body style="border: 2px outset black; padding: 5px;">
+    <form>
+        Name <br>
+        <input type="text" placeholder="Enter your name"> <br><br>
+        Date of Birth <br>
+        <input type="date" name="Date of birth" id="birth"> <br><br>
+        Roll Number <br>
+        <input type="number" name="Number" id="Number" placeholder="Enter your roll number" min="1" max="100"> <br><br>
+        Email Id <br>
+        <input type="email" name="Email" id="Email" placeholder="Enter your email id"> <br><br>
+        Password <br>
+        <input type="password" name="password" id="password" required placeholder="Enter your password"> <br><br>
+        How do you rate our course? <br>
+        <select name="Dropdown" id="Dropdown">
+            <option value="Excellemt">Excellemt.</option>
+            <option value="Good">Good</option><br>
+            <option value="fair">fair</option><br>
+            <option value="bad">Bad</option>
+        </select> <br><br>
+        Please give us the rating <br>
+        <select name="rating" id="rating">
+
+            <option value="Star">5 -Star</option>
+            <option value="Star">4 -Star</option>
+            <option value="Star">3 -Star</option>
+            <option value="Star">2 -Star</option>
+            <option value="Star">1 -Star</option>
+
+        </select>
+        <br><br>
+
+        Your Favorite Topic in HTML <br><br>
+        <input type="checkbox">
+        Structural Element <br>
+        <input type="checkbox" name="" id=""> Links and list <br>
+        <input type="checkbox">HTML Media <br>
+        <input type="checkbox">HTML Table <br>
+        <input type="checkbox"> Grouping Elements <br>
+        <input type="checkbox">Forms <br><br>
+
+        Do you like the HTML course1? <br>
+        <input type="Radio"> yes <input type="Radio"> No <br><br>
+
+        Few word about course <br>
+        <textarea name="about course" id="course" cols="30" rows="5"></textarea> <br><br>
+
+        <button type="button" onclick="alert ('thanks for feedback!')">submit</button>
+        <br><br>
+
+    </form>
+</body>
+
+</html>

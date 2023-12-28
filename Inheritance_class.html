@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance - Class</title>
+</head>
+
+<body>
+    <script>
+        // basic code to understand 
+        class fruits {
+            hello(name) {
+                this.name=name;
+                document.write("New Fruits : " + this.name +"<br>")
+            }
+        }
+        class veg extends fruits {
+            hi() {
+            }
+        }
+        let a = new fruits("kkkkk");
+        a.hello("Pineapple");
+        let b = new veg("Apple");
+        b.hello("Mango"); // varible. method ka use karke value get hori hai q ki apne apne parameter me varible banaye hai
+        // agar ap paramter me nhi direct this.varible name ka usse karte toh apko object me he value dalni hoti thi
+        b.hello("Banana");
+
+    </script>
+    <script>
+        class employeeee {
+            info(name, age, salary) {
+                this.empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+                document.write(`my name is ${this.empname} and my age is ${this.empage} and my salary is ${this.empsalary}`)
+            }
+        }
+        let emp = new employeeee();
+        emp.info("Pankaj", 26, 35000);
+    </script>
+
+    <script>
+        class employee { //ye humne 1st class banayi uskao nam diya employee
+            constructor(name, age, salary) { //fir constructor nam ka method ya function use kiya jisme 3 varible ya parameter diye keh sakte ho
+                this.empname = name;  // this. lagane se hum us varible ko kabi b kahi b call kar sakte hai 
+                this.empage = age;
+                this.empsalary = salary;
+                console.log("Constructor : Employee")  // check karne k liye console log me likha hai 
+            }
+
+            info() {   // ye hamri 2nd  method hai jisme humko jis format me statement chaheye varible ki help se karenge 
+                document.write(`<h3> Employee Class <h3>  
+                my name is ${this.empname} <br> 
+                and my age is ${this.empage} <br>
+                and my salary is ${this.empsalary} <br>  `)
+            }
+        }
+
+        class manager extends employee {  //ye hamari 2nd class hai jiska nam manager hai aur isko humne ("extend") lagaya taki hum 1st class ko puri tarah excess kar sake
+            info(){
+                let ta = 1000;
+                let pa = 300;
+                let Totalsalary=this.empsalary+ta+pa;
+                document.write(`<h3>Manager Class</h3>
+                Name : ${this.empname} <br>
+                Age : ${this.empage} <br>
+                salary : ${Totalsalary}<br>`)
+            }
+
+        }
+
+        let x = new manager("ankaj", 26, 25000);
+        let y= new employee("kaj", 26, 5000);
+x.info();
+y.info();
+
+    </script>
+</body>
+
+</html>

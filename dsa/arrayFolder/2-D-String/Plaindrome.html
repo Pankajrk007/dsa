@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String is Palindrome or not </title>
+</head>
+
+<body>
+    <script>
+        function CheckPalindrome(s, i, j) {
+            while (i < j) {
+                if (s[i] !== s[j]) {
+
+                    return false;
+                }
+                i++;
+                j--;
+
+            }
+            return true;
+        }
+        let s = "nitin"
+       
+        console.log(CheckPalindrome(s, 0, s.length - 1)); 
+    </script>
+</body>
+
+</html>

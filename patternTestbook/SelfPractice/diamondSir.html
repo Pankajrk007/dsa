@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//    *
+//   ***
+//  *****
+//   ***
+//    *
+
+
+
+let s ="";
+let n=7;
+let spacec= Math.floor(n/2); 
+star = 1;
+for ( let i =1;i<=n;i++){
+    for (let j=1;j<=spacec;j++){
+        s+=" ";
+    }
+    for ( let k =1;k<=star;k++){
+        s+="*"
+    }
+    s+="\n";
+    if (i<=Math.floor(n/2)){
+star+=2;
+spacec--;
+
+    }else{
+        star-=2;
+        spacec++;
+        }
+        console.log(s);
+        
+
+}
+console.log(s);
+
+
+
+
+// for (let i =1; i<=n;i++){
+//     for (let j=1;j<=spacec;j++){
+//         s+=" ";
+//     }
+//     for (let k =1; k<=star;k++){
+//         s+="*";
+//         s+="\n"
+//     }
+//     if (i=spacec){
+//         star+=2;
+//         spacec--
+//     }else{
+//         star-=2;
+//         spacec++
+//     }
+//     console.log(s);
+
+// }
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .card {
+            margin-top: 30px;
+        }
+
+        #age {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+        }
+
+        .btn {
+            align-items: center;
+            justify-content: center;
+            /* background-color: aqua; */
+            /* color: red; */
+            margin-top: 10px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Age Calculator</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Age Calculator</h5>
+                        <div class="row">
+                            <!-- Input for Date -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="Date" placeholder="Enter Date">
+                                </div>
+                            </div>
+                            <!-- Input for Month -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select id="Month" class="form-control">
+                                        <option value="1">Jan</option>
+                                        <option value="2">Feb</option>
+                                        <option value="3">Mar</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">Sep</option>
+                                        <option value="10">Oct</option>
+                                        <option value="11">Nov</option>
+                                        <option value="12">Dec</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Input for Year -->
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="Year" placeholder="Enter Year">
+                            </div>
+                        </div>
+                        <!-- Button to trigger age calculation -->
+                        <button class="btn btn-primary btn-block" onclick="calculateAge()">Calculate Age</button>
+                        <!-- Display area for calculated age -->
+                        <div id="age"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Function to calculate age
+        function calculateAge() {
+            var d1 = document.getElementById("Date").value;
+            var m1 = document.getElementById("Month").value;
+            var y1 = document.getElementById("Year").value;
+
+            var date = new Date();
+            var d2 = date.getDate();
+            var m2 = 1 + date.getMonth();
+            var y2 = date.getFullYear();
+            var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            if (d1 > d2) {
+                d2 = d2 + month[m2 - 1];
+                m2 = m2 - 1;
+            }
+
+            if (m1 > m2) {
+                m2 = m2 + 12;
+                y2 = y2 - 1;
+            }
+
+            var d = d2 - d1;
+            var m = m2 - m1;
+            var y = y2 - y1;
+
+            // Display the calculated age
+            document.getElementById("age").innerHTML = "Your age is " + y + " Years " + m + " Months " + d + " Days ";
+        }
+    </script>
+</body>
+
+</html>

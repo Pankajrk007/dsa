@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Common Prefix </title>
+</head>
+<body>
+    
+
+    <script>
+     let  arr  =["flight", "flow", "flower"];
+console.log(arr[0]);//flight
+     var LongestCommonPrefix = function(arr){
+        let ans = [ ];
+        for (let i  = 0; i < arr[0].length;i++){
+            for (let j =1; j< arr.length; j++){
+                if (arr[0][i] != arr[j][i]){
+                    return ans.join('');
+                }
+            }ans.push(arr[0][i]);
+        }
+        return ans.join('');
+     };
+
+     console.log(LongestCommonPrefix(arr))
+    </script>
+</body>
+</html>

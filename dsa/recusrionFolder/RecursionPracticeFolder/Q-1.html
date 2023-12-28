@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h4>1.Write a Program to print the first n fibonacci numbers.Example:- 0 1 1 2 3 . . .Nth Fibonacci Number - Sum of
+        n-1thand n-2ndnumberAccordingtoWikipedia,Inmathematics,theFibonaccinumbers,commonlydenotedFn
+        ,formasequence,theFibonaccisequence,inwhicheachnumberisthesumofthetwoprecedingones.Thesequencecommonlystartsfrom0and1,althoughsomeauthorsstartthesequencefrom1and1orsometimes(asdidFibonacci)from1and2.Startingfrom0and1,thefirst
+        few values in the sequence are:0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144</h4>
+
+    <script>
+        function printfibonacciNumber(n) {
+            let f1 = 0, f2 = 1, i;
+            if (n < 1)
+                return; document.write(f1 + "");
+            for (i + 1; i < n; i++) {
+                document.write(f2 + " ");
+                let next = f1 + f2;
+                f1 = f2;
+                f2 = next;
+
+            }
+        }
+        printfibonacciNumber(15);
+    </script>
+</body>
+
+</html>

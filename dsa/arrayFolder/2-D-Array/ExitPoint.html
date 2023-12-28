@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exit Point of Matrics</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let arr = [
+            [0, 0, 0, 0, 1, 0, 0, 0],
+            [1, 0, 1, 0, 0, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [1, 0, 1, 0, 1, 1, 0, 0],
+            [0, 1, 0, 0, 0, 0, 0, 0],
+        ];
+
+
+        let i = 0, j = 0;
+        let cd = 0;
+        let di = [0, 1, 0, -1];
+        let dj = [1, 0, -1, 0];
+
+        while (i<arr.length && j <arr[0].length && i>=0 && j>=0) {
+            if (arr[i][j] == 1) {
+                arr[i][j] = 0;
+                cd = (cd + 1) % 4;
+            }
+            i += di[cd];
+            j += dj[cd];
+
+        }
+        i-= di[cd];
+        j-= dj[cd];
+        console.log(i, j)
+    </script>
+</body>
+
+</html>

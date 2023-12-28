@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array testbook lecture</title>
+</head>
+
+<body>
+
+    <script>
+
+
+a = [3, 1, 2, 4, 5, 6, 7];
+   
+        target = 5;
+    
+        function linearSearch(a, target) {
+            for (let i = 0; i < a.length; i++) {
+                console.log(a[i],"Array inner element on index "+i );
+                if (a[i] === target) {
+                    console.log(" yes found at line number : "+ i ,a[i]);
+
+                    // return i;
+                } 
+            }
+// return -1;
+        }
+        linearSearch(a,target);
+
+// uper one is linear search it can be used for any array;
+
+
+// binarySearch it is only used for sorted array ;
+
+        function binarySearch(a,target){
+let start =0;
+let end= a.length-1;
+
+while (start <= end){
+const mid =Math.floor(start + end )/2;
+if (a[mid] ===target){
+    console.log(a[mid],target);
+    return mid;
+} else if (a[mid] >target){
+    end =mid-1;
+
+}else{
+    start=mid+1;
+}
+
+}
+
+return -1
+        }
+console.log(binarySearch(a,target));
+    </script>
+</body>
+
+</html>

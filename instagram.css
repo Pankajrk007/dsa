@@ -1,0 +1,82 @@
+*main{
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: rgb(32, 39, 37);
+    display: flex ;
+   
+    width: 300px;
+    height:300px;
+    align-items: center;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    background: linear-gradient(135deg, rgb(20, 32, 6), rgb(49, 29, 32));
+   
+}
+
+
+.insta1{
+   
+
+    width: 5px; height: 5px;
+    
+    
+    background-color:rgb(252, 252, 252);
+    border: 4px solid rgb(247, 250, 247);
+    border-radius: 50%;
+   margin-top: 10px;
+    margin-left: 125px;
+    
+}
+
+.insta2{
+   
+
+    width: 197px; height: 200px;
+    background:linear-gradient(135deg, #f403d1,#9c6df5)
+    
+    border-radius: 25%;
+    margin-top: 4px;
+    margin-left: 20px;
+    
+}
+
+.insta3{
+  
+    width: 150px; height: 152px;
+    background-color: rgb(223, 43, 178);
+    border: 12px solid rgb(243, 229, 231);
+    border-radius: 25%;
+    margin-top: 13px;
+    margin-left: 12px;
+    
+}
+
+.insta4{
+    
+    width: 50px; height: 52px;
+    background-color: rgb(253, 17, 135);
+    border: 12px solid rgb(247, 238, 239);
+    border-radius: 100%;
+    margin-top: 15px;
+    margin-left: 37px;
+
+    
+}
+.insta2{
+    background:linear-gradient(200deg, #f85454,#8f4ef8);
+    border-radius: 2rem;
+    
+}
+
+
+.insta3{
+    background:linear-gradient(200deg, #f85454,#8f4ef8);
+}
+
+.insta4{
+    background:linear-gradient(2000deg, #f403d1,#8f4ef8);
+}

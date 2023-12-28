@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Introduction and Fetch method</title>
+    <!-- <style>
+    body{
+        height:100%;
+        background-image:linear-gradient(toright,rgb(77,168,183),rgb(131, 120, 202));
+        font-family: "Montserrat","Helvetica Neue","sans-serif";
+        }
+        
+    </style> -->
+</head>
+<body>
+    
+    <script>
+        fetch("https://dummyjson.com/products/1")
+        .then(response => response.json())
+        .then(json => console.log(json))
+
+    </script>
+
+</body>
+</html>

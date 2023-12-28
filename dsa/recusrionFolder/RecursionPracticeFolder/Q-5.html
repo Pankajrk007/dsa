@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Write a Program to reverse the string using a recursive method</h4>
+
+    <script>
+        // function reverse (str,len ){
+        //     if (len ==str.length){
+        //         return;
+        //     }
+        //     reverse(str,len+1);
+        //     document.write(str(len));
+
+        // }
+        // let a = "RecurString";
+        // reverse(a,0);
+
+
+        function reverse(str, len) { 
+            if (len == str.length) {
+                 return;
+                 }
+                  reverse(str, len + 1);
+                   document.write(str[len]); 
+                } 
+                let a = "RecurString"; 
+                reverse(a, 0);
+    </script>
+<!-- 
+Certainly! Here is the table with both the intermediate and final outputs included:
+
+| Iteration/Recursion | `len` | `str[len]` | Output       |
+|----------------------|-------|------------|--------------|
+| Initial              | 0     | R          |              |
+| Recursion 1          | 1     | e          | Re           |
+| Recursion 2          | 2     | c          | Rec          |
+| Recursion 3          | 3     | u          | Recu         |
+| Recursion 4          | 4     | r          | Recur        |
+| Recursion 5          | 5     | S          | RecurS       |
+| Recursion 6          | 6     | n          | RecurSn      |
+| Recursion 7          | 7     | i          | RecurSni     |
+| Recursion 8          | 8     | g          | RecurSni g   |
+| Final Output         | -     | -          | g inSruceR   | -->
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String compression</title>
+</head>
+<body>
+  <script>
+// output :  a2b3c2j5def2
+
+let s =  "aabbbccjjjjjdeff";
+let ans  =  [];
+let i =0 ;
+while(i< s.length){
+  let j = i+1;
+  let count  = 1;      // 1 liya kyuki hum countingg the number of a start me i =0; =a islye count ek bar huwa
+
+  while(j<s.length && s[i] == s[j]  ){
+  j++, count++}
+      ans.push(s[i]);
+      if (count>1){
+          ans.push(count);
+       
+      
+  }
+  i=j
+}
+console.log(ans.join(""))
+
+
+// output :  a2b3c2j5def2
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-D Array Spiral Matrics</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let a = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],               // 3*3 matrix
+        ];
+
+        let rows = a.length;            // a ki length matlab andar kitne array hai a k;
+        let cols = a[0].length;         //  array k andar jo first array hai uski kitni length hai
+
+
+        let tw = 0;                  // tw = topWall (1,2,3) aur ye 0 index se start hora hai 
+        let bw = rows - 1;            // bw = BottomWall (7,8,9) aur ye rows-1 index se start hora hai 
+        let rw = cols - 1;            // rw = RightWall (7,4,1) aur ye cols-1  index se start hora hai   
+        let lw = 0;                   // lw = leftWall (1,4,7) aur ye 0  index se start hora hai   
+
+
+        let total = rows * cols;        // total kitna hota hia
+
+        while (total > 0) {               // jab tak total greater hai tab tak ye looop chalega;
+
+            for (let j = lw; j <= rw && total > 0; j++) {          // 0 se start hoke cols-1 (2) tak chal rha hai
+                console.log(a[tw][j]);                           // array ka pehle row lete fir col,tw row hai aur j cols
+                total--;                                         // total kam kar rhe taki vo dubara repeat na ho
+            }
+            tw++;                                                // yaha humne jo line print ki thi ab uska kam ho gya vo line dubara nhi print karani;
+
+
+            for (let i = tw; i <= bw && total > 0; i++) {                // 0 se start hoke rows-1 (2) tak chal rha hai
+                console.log(a[i][rw]);
+                total--;
+            }
+            rw--;
+
+            for (let j = rw; j >= lw && total > 0; j--) {                 // cols -1 (2)  se start hoke 0 tak chal rha hai
+                console.log(a[bw][j]);
+                total--;
+
+            }
+            bw--
+            for (let i = bw; i >= tw && total > 0; i--) {                      // row - 1 (2)  se start hoke 0 tak chal rha hai
+                console.log(a[i][lw]);
+                total--;
+
+            } lw++
+        }
+
+
+
+        1
+        2
+        3
+        6
+        9
+        8
+        7
+        4
+        5
+
+    </script>
+</body>
+
+</html>

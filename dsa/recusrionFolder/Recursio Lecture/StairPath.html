@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stair Path using Recursion</title>
+</head>
+
+<body>
+
+
+    <script>
+// i=current stair 
+// di = destination stair 
+        function stariPath(i, path, di) {
+            if (i>di){
+                return
+            }
+            if (i === di) {
+                console.log(path)
+                return;
+            }
+            stariPath(i + 1, path + 1, di);
+            stariPath(i + 2, path + 2, di);
+            stariPath(i + 3, path + 3, di);
+        }
+        stariPath(0, "", 3);
+
+        // fn(0,,3) starts running
+        // fn(0,,3) calls fn(1,1,3)
+        // fn(1,1,3) starts running
+        // fn(1,1,3) calls fn(2,11,3)
+        // fn(2,11,3) starts running
+        // fn(2,11,3) calls fn(3,111,3)
+        // fn(3,111,3) starts running
+        // fn(3,111,3) returns undefined to fn(2,11,3)
+        // fn(2,11,3) continues running
+        // fn(2,11,3) calls fn(4,112,3)
+        // fn(4,112,3) starts running
+        // fn(4,112,3) returns undefined to fn(2,11,3)
+        // fn(2,11,3) continues running
+        // fn(2,11,3) calls fn(5,113,3)
+        // fn(5,113,3) starts running
+        // fn(5,113,3) returns undefined to fn(2,11,3)
+        // fn(2,11,3) continues running
+        // fn(2,11,3) returns undefined to fn(1,1,3)
+        // fn(1,1,3) continues running
+        // fn(1,1,3) calls fn(3,12,3)
+        // fn(3,12,3) starts running
+        // fn(3,12,3) returns undefined to fn(1,1,3)
+        // fn(1,1,3) continues running
+        // fn(1,1,3) calls fn(4,13,3)
+        // fn(4,13,3) starts running
+        // fn(4,13,3) returns undefined to fn(1,1,3)
+        // fn(1,1,3) continues runnng
+        // fn(1,1,3) returns undefined to fn(0,,3)
+        // fn(0,,3) continues running
+        // fn(0,,3) calls fn(2,2,3)
+        // fn(2,2,3) starts running
+        // fn(2,2,3) calls fn(3,21,3)
+        // fn(3,21,3) starts running
+        // fn(3,21,3) returns undefined to fn(2,2,3)
+        // fn(2,2,3) continues running
+        // fn(2,2,3) calls fn(4,22,3)
+        // fn(4,22,3) starts running
+        // fn(4,22,3) returns undefined to fn(2,2,3)
+        // fn(2,2,3) continues running
+        // fn(2,2,3) calls fn(5,23,3)
+        // fn(5,23,3) starts running
+        // fn(5,23,3) returns undefined to fn(2,2,3)
+        // fn(2,2,3) continues running
+
+        // fn(2,2,3) continues running
+
+        // fn(2,2,3) returns undefined to fn(0,,3)
+
+        // fn(0,,3) continues running
+
+        // fn(0,,3) calls fn(3,3,3)
+
+        // fn(3,3,3) starts running
+
+        // fn(3,3,3) returns undefined to fn(0,,3)
+
+        // fn(0,,3) continues running
+
+        // fn(0,,3) continues running
+
+        // fn(0,,3) returns null
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+

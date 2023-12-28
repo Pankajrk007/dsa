@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//      * 
+//     * * 
+//    * * *        Draw this pattern
+//   * * * * 
+//  * * * * *
+
+        for (let i =0; i<=5;i++){
+            let space= " ".repeat(5-i);
+            let star = space + "* ".repeat(i);
+         
+            console.log(star)
+        }
+        console.log("=========================="+"\n")
+
+
+        //  * * * * * 
+        //   * * * * 
+        //    * * *  Draw this pattern
+        //     * * 
+        //      *
+
+        for ( let i =5 ; i >=1; i--){
+            let space = " ".repeat(5-i);
+            let row = space + "* ".repeat(i)
+            console.log(row)
+        }
+        console.log("=========================="+"\n")
+
+
+        //  * 
+        //  * * 
+        //  * * * 
+        //  * * * *        Draw this pattern
+        //  * * * * * 
+
+      for ( let i =0; i<=5;i++){
+        let star =  "* ".repeat(i);
+        console.log(star);
+      }
+      console.log("=========================="+"\n")
+
+      
+       
+    //        *
+    //       **
+    //      ***               Draw this pattern
+    //     ****
+    //    *****
+      
+      
+// Right-aligned Triangle Pattern using for loop
+for (let i = 0; i <= 5; i++) {
+  let spaces = ' '.repeat(5 - i); // Add spaces before asterisks
+  let row = spaces + '*'.repeat(i); // "* " likhoge toh traingle banega aur sirf "*" se right angle trangle
+  console.log(row);
+}
+console.log("=========================="+"\n")
+
+
+//      * 
+//     * * 
+//    * * * 
+//   * * * *               Draw this pattern
+//  * * * * * 
+
+      for (let i =1; i<=5;i++){
+        let space = " ".repeat(5-i);
+        let star = space+ "* ".repeat(i);
+        console.log(star);
+      }
+      console.log("=========================="+"\n")
+
+
+//  *****
+//   ****
+//    ***          Draw this pattern
+//     **
+//      *
+
+
+for ( let i =5;i>=0;i--){
+    let space =  " ".repeat(5-i);
+    let star = space + "*".repeat(i);
+    console.log(star);
+}
+console.log("=========================="+"\n")
+
+
+
+
+//      *
+//     * *
+//    * * *
+//   * * * *
+//  * * * * *
+//   * * * *        Draw The Pattern
+//    * * *
+//     * *
+//      *
+
+//Diamond pattern;
+let rows=5;
+ 
+    for (let i = 1; i <= rows; i++) {
+        let spaces = ' '.repeat(rows - i);
+        let stars = '* '.repeat(i);
+        console.log(spaces + stars.trim());
+    }
+
+    for (let i = rows - 1; i >= 1; i--) {
+        let spaces = ' '.repeat(rows - i);
+        let stars = '* '.repeat(i);
+        console.log(spaces + stars.trim());
+    }
+
+    console.log("=========================="+"\n")
+
+//      *
+//     * *
+//    * * *
+//   * * * *
+//  * * * * *
+//   * * * *
+//    * * *
+//     * *
+//      *
+
+   for ( let i = 1;i<=rows;i++){
+let space = " ".repeat(rows-i);
+let star = "* ".repeat(i);
+console.log(space+ star.trim());
+   }
+   for (let i=rows-1; i>=1;i--){
+    let space = " ".repeat(rows-i);
+    let star = "* ".repeat(i);
+    console.log(space+star.trim())
+   }
+
+   console.log("=========================="+"\n")
+
+
+//    *
+//   ***
+//  *****
+// *******
+//  *****
+//   ***
+//    *  Print this
+
+let rowss=5;
+ {
+    for (let i = 1; i <= rowss; i++) {
+        let spaces = ' '.repeat(rowss - i);
+        let stars = '*'.repeat(2 * i - 1);
+        console.log(spaces + stars);
+    }
+
+    for (let i = rowss - 1; i >= 1; i--) {
+        let spaces = ' '.repeat(rowss - i);
+        let stars = '*'.repeat(2 * i - 1);
+        console.log(spaces + stars);
+    }
+}
+
+
+
+    </script>
+</body>
+</html>

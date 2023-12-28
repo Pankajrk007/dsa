@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Form
+    </title>
+    <style>
+        body {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-image: linear-gradient(to right, white, rgb(122, 199, 230));
+            /* display: flex;
+            justify-content: center; */
+            /* text-align: center; */
+            border: 1px solid black;
+            height: fit-content;
+            width: fit-content;
+            padding: 10px;
+        }
+
+        input {
+            width: 400px;
+            padding: 5px;
+        }
+
+        textarea {
+            width: 400px;
+            padding: 5px;
+        }
+
+        label {
+            font-weight: bolder;
+        }
+
+        .but {
+            background-color: aqua;
+            font-weight: bold;
+            width: 60px;
+            height: 25px;
+
+
+        }
+
+        input .but {
+            background-color: antiquewhite;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <h1>User Record list</h1> -->
+
+        <form id="Blood_Donation_Form">
+            <h1>User Blood Record list</h1>
+            <label for="User name">User name</label><br>
+            <input type="text" id="user_name" placeholder="Enter your Name" required>
+            <br>
+            <label for="Email Address">Email</label><br>
+            <input type="email" id="email" required placeholder="Enter your Email">
+            <br>
+            <label for="select your blood group">Blood group</label><br>
+            <input type="text" id="blood" required placeholder="A+">
+
+            <br>
+            <label for="Enter your address">Enter your address</label><br>
+            <textarea placeholder="Adress" id="Adress" name="Address" cols="50" rows="4"></textarea>
+            <br>
+            <label for="Enter your phone Number">Enter your phone Number</label><br>
+            <input type="text" id="phone" required placeholder="91+987465123">
+            <br>
+            <label for="health report">health report</label><br>
+            <textarea placeholder="health report" name="health report" id="health_report" cols="50" rows="4"></textarea>
+
+            <br>
+            <input type="submit" class="but">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('Blood_Donation_Form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                var username = document.getElementById('user_name').value;
+                var email = document.getElementById('email').value;
+                var blood = document.getElementById("blood").value;
+                var address = document.getElementById('Adress').value;
+                var phonenumber = document.getElementById('phone').value;
+                var health = document.getElementById('health_report').value;
+
+                var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                var phone_regex = /^\d{10}$/;
+
+
+                console.log("User name     :" + username);
+                console.log("Email Addess  :" + email);
+                console.log("Blood Group   :" + blood);
+                console.log("Home Address  :" + address);
+                console.log("Phone Number  :" + phonenumber);
+                console.log("Health report :" + health);
+
+
+                if (username === "" || email === "" || blood === "" || address === "" || phonenumber === "" || health === "") {
+                    alert('Please fill in all fields')
+                    return;
+                }
+                // Yeh line check kar rahi hai ki koi bhi form field khali toh nahi hai. Agar koi field khali hai, toh ye condition true hogi.
+                // || operator ka istemal kiya gaya hai, jo kahega ki agar koi bhi condition true hai, toh poori statement true hogi.
+                // Agar koi field khali hai, toh ek alert diya jayega jisme likha hoga 'Please fill in all fields', aur function se bahar nikal jayega (return se).
+
+                if (!email_regex.test(email)) {
+                    alert('Invalid email, Please enter a valid email Address')
+                    return
+
+                }
+                //Yeh line check kar rahi hai ki user ne valid email address enter kiya hai ya nahi, email_regex ka use karke.
+                // ! operator ka istemal kiya gaya hai, jo kahega ki agar email_regex test false return karta hai (matlab invalid email), toh condition true hogi.
+                // Agar email invalid hai, toh ek alert diya jayega jisme likha hoga 'Invalid email, Please enter a valid email Address', aur function se bahar nikal jayega.
+
+                if (!phone_regex.test(phonenumber)) {
+                    alert('Invalid Number, Please enter a valid number')
+                    return;
+                }
+                // Yeh line check kar rahi hai ki user ne valid phone number enter kiya hai ya nahi, phone_regex ka use karke.
+                // Agar phone number invalid hai, toh ek alert diya jayega jisme likha hoga 'Invalid Number, Please enter a valid number', aur function se bahar nikal jayega.
+
+                alert("form Submitted successfully")
+
+
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

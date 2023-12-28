@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII value String with differnce example </title>
+</head>
+<body>
+    
+
+    <script>
+
+
+let s = "aAgderDgsgHsA";
+let ans = [];
+
+for ( let i = 0; i<s.length;i++){
+    let cc =s[i];        //currrent charachter cc
+    ans.push(cc);        // ans array me s [i]means 0 ki value push kiya hai means add kiya hai
+    if(i+1 < s.length){
+        let nc = s[i+1];  // next character  nc
+        let diff = nc.charCodeAt() - cc.charCodeAt();    // ASCII value ka diffence nikala hai
+        ans.push(diff);        // yaha ans array me ASCII value ka diffence add kiya hai
+
+
+    }
+}
+console.log(ans.join(''));   // join( ) ans array ko ek string me convert karega firse .
+
+
+
+
+    </script>
+</body>
+</html>

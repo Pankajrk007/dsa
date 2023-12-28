@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion method</title>
+</head>
+<body>
+    
+    <script>
+        function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+// Example usage:
+var result = fibonacci(5);
+console.log("Fibonacci of 5 is:", result);
+
+
+// Sure, let's break down the steps of the `fibonacci` function for `fibonacci(5)`:
+
+// 1. **fibonacci(5)**
+//    - `fibonacci(4) + fibonacci(3)`
+
+// 2. **fibonacci(4)**
+//    - `fibonacci(3) + fibonacci(2)`
+
+// 3. **fibonacci(3)**
+//    - `fibonacci(2) + fibonacci(1)`
+
+// 4. **fibonacci(3)**
+//    - `fibonacci(1) + fibonacci(0)` (base cases)
+//    - `1 + 0`
+
+// 5. **fibonacci(4)**
+//    - `fibonacci(3) + fibonacci(2)`
+//    - `1 + 1`
+
+// 6. **fibonacci(5)**
+//    - `fibonacci(4) + fibonacci(3)`
+//    - `2 + 1`
+
+// So, `fibonacci(5)` equals 3. The values are calculated step by step by breaking down the problem into smaller sub-problems until the base cases are reached. Each step involves the calculation of smaller Fibonacci numbers until we can compute the final result for `fibonacci(5)`.
+    </script>
+    <script>
+        let n=5;
+        let s=" ";
+        for ( let i =n; i<=1;i--){
+            for (let j =1;j<=n;j++){
+                document.write(j);
+
+
+            }
+            document.write();
+
+        }
+        console.log()
+
+    </script>
+</body>
+</html>

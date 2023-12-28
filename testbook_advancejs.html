@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance js making simple form</title>
+</head>
+
+<body>
+    <h1>Hello Pankaj</h1>
+    <form>
+        <div>
+            <label for="title">Question Title</label>
+            <input type="text" name="title" id="title">
+        </div>
+
+        <div>
+            <label for="title">option 1</label>
+            <input type="text" name="option1" id="option1">
+        </div>
+
+        <div>
+            <label for="title">option 2</label>
+            <input type="text" name="option2" id="option2">
+        </div>
+
+        <div>
+            <label for="title">option 3</label>
+            <input type="text" name="option3" id="option3">
+        </div>
+        <div>
+            <label for="title">option 4</label>
+            <input type="text" name="option4" id="option4">
+        </div>
+    </form>
+
+    <script>
+        class DLLNode {
+            constructor(value) {
+                this.value = value;
+                this.prev = null;
+                this.next = null;
+            }
+        }
+        class DoublelyLinkedList {
+            constructor(){
+                this.head = null; //initially head n tail dono null hotae hai 
+                this.tail = null;
+            }
+            setHead = (node )=> {
+                if (this.head===null){
+                    this.head = node;
+                    this.tail = node;
+                    return;
+                }
+                this.insertBefore(this.head, node);
+            };
+
+            setTail = (node)=> {
+                if ( this.tail===null){
+                    this.setHead(node);
+                    return;
+                }
+                this.insertAfter(this.tail , node);
+            };
+
+            insertBefore = (existingNode, newNode) => {
+                if ( newNode === this.head && newNode ===this.tail){
+                    return;
+                }
+                this.remove(newNode);
+                newNode.prev = existingNode.prev;
+                newNode.next = existingNode;
+                if ( existingNode.prev=== null){
+                    this.head = newNode;
+
+                }else{
+                    existingNode.prev.next = newNode;
+
+                }
+                existingNode.prev = newNode;
+            };
+            insertAfter  = (existingNode , newNode) => {
+                if (newNode === this.head&& newNode === this.tail){
+                    return;
+                }
+                this.remove(newNode);
+                newNode.prev = existingNode;
+                newNode.next = existingNode.next;
+
+                if ( existingNode.next=== null){
+                    this.tail = newNode;
+                } else{
+                    existingNode.next.prev = newNode;
+
+                }
+                existingNode.next = newNode;
+
+            };
+            remove =  ( node)=> {
+                if (node === this.head){
+                    this.head = this.head.next;
+
+                }
+                if ( node === this.tail){
+                    this.tail =  this.tail.prev;
+                }
+                if ( node.prev !== null){
+                    node.prev.next = node.next;
+                }
+                if ( node.next!== null){
+                    node.next.prev = node.prev;
+                 }
+                 node.prev =null;
+                 node.next = null;
+            };
+            
+
+        }
+        class LRUCache {
+            constructor (size){
+                this.maxSize = size || 1;
+                this.currentSize = 0;
+                this.map = new Map();
+                this.dll = new DoublelyLinkedList();
+            }
+
+            insert = (key , value)=>{
+if (this.currentSize === this.maxSize){
+    this.remove();
+}
+const node = new DLLNode({key,value});
+this.map.set(key,node);
+this.dll.setTail(node);
+this.currentSize++;
+
+            };
+
+            remove= ()=> {
+                if(this.currentSize> 0){
+                    const key = this.dll.head.value.key;
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

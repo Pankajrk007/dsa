@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Function with constant time </title>
+</head>
+
+<body>
+    <script>
+        console.log("============Function with constant time");
+
+        function sayNum(num) {
+            console.log("The num is : " + num);
+
+        }
+        // TC=O(1)
+
+        function sayNum(num) {
+            console.log("The num is : " + num);
+            if (n % 2 == 0) {
+                console.log("The num is even : " + num);
+
+            } else {
+                console.log("The num is odd : " + num);
+
+            }
+            if (n <= 0) {
+                console.log("The num is positive : " + num);
+
+            } else {
+                console.log("The num is negative : " + num);
+
+            }
+        }
+        // TC=O(1)
+
+    </script>
+    <script>
+        console.log("===============Function with linear time ")
+
+        function printLines(n) {
+            for (let i = 0; i < n; i++) {
+                console.log("lines : ", i + 1)
+            }
+        } printLines(5);
+        // TC=O(1)
+
+    </script>
+    <script>
+        console.log("===========example 2============");
+        function multipleSeperately(n) {
+            for (let i = 0; i < n; i++) {
+                if (i % 2 == 0) {
+                    console.log(i, ": is multiple of 2")
+                }
+            }
+            for (let i = 0; i < n; i++) {
+                if (i % 3 == 0) {
+                    console.log(i, ": is multiple of 3")
+                }
+            }
+        }
+    </script>
+    <script>
+        console.log("==========Function with Alogoritm time")
+
+        function binarySearch(A) {
+            let start = 0; //ye array ka start point hai 
+            let end = A.length - 1; // ye arary ka end point hai.
+
+            while (startv <= end) {
+                const mid = Math.floor(start + end / 2);
+                if (A[mid] === target) {
+                    return mid;
+                } else if (A[mid] > target) {
+                    end = mid - 1;
+                } else {
+                    mid + 1;
+                }
+            }
+
+            return -1;
+
+        }
+
+        // TC = O(log N)
+    </script>
+    <script>
+        console.log("==========function with expontial time")
+        function fabonachi(n) {
+            if (n <= 1) {
+                return 1;
+
+            }
+            return fabonachi(n - 1) + fabonachi(n - 2) + fabonachi(n);
+        }
+        // TC= O (3^N)
+    </script>
+
+    <script>
+        for (let i = 1; i < 5; i++) {
+            for (let j = i; j < 5; j++) {
+                document.write("*");
+            } document.write("<br>")
+        }
+        document.write("============second loop==============");
+        for (let i = 1; i < 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            } document.write("<br>")
+        }
+    </script>
+    <script>
+        let n = 4;
+        let string = "";
+        for (let i = n; i >= 1; i--) {
+            let star = i;                // ek line me hame kitne star chaheye
+            let space = n - i;           //i ya star dono use kar  sakte ho           //ek line me hame kitne space chaheye
+while(space!=0){
+    string +=" ";
+    space--;
+
+}
+while(star!=0){
+    string +="*";
+    star--;
+
+}
+string +="\n";}
+
+        console.log(string);
+    </script>
+
+    <script>
+    
+//    *
+//   **
+//  ***
+// ****  
+
+         let num = 4;
+        let strings = "";
+        for (let i = 1; i <= num; i++) {
+            let star = i;                // ek line me hame kitne star chaheye
+            let space = num - i;           //i ya star dono use kar  sakte ho           //ek line me hame kitne space chaheye
+while(space!=0){
+    strings +=" ";
+    space--;
+
+}
+while(star!=0){
+    strings +="*";
+    star--;
+
+}
+strings +="\n";}
+
+        console.log(strings);
+    </script>
+</body>
+
+</html>

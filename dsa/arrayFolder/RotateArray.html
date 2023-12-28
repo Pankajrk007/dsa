@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function rotateArray(a,StartPoint,Endpoint){
+            let i=StartPoint;
+            let j=Endpoint;
+            while(i<j){
+                let temp =a[i];
+                a[i] = a[j];
+                a[j] = temp;
+                i++; j--;
+
+            }
+            return a;
+        }
+        let a =[1,2,3,4,5,6,7];
+
+  let k=2;
+  let n= a.length;
+  console.log(a);
+  a=rotateArray(a,n-k,n-1);
+  console.log(a);
+  a = rotateArray(a, 0,n-k-1);
+  console.log(a);
+  a = rotateArray(a,0,n-1)
+  console.log(a);
+
+
+//   (7) [1, 2, 3, 4, 5, 6, 7]
+
+// RotateArray.html:29 (7) [1, 2, 3, 4, 5, 7, 6] //last 2 change kiya
+// RotateArray.html:31 (7) [5, 4, 3, 2, 1, 7, 6]// 1-5 reverse kiya
+// RotateArray.html:33 (7) [6, 7, 1, 2, 3, 4, 5] //pura array reverse kiya 
+
+    </script>
+</body>
+</html>

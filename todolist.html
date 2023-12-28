@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1>Add your To Do List Here</h1>
+    <form id="myform">
+<input id="myinput" type="text">
+<button> Add </button>
+    </form>
+
+    <h2>
+        To Do list
+    </h2>
+    <ul id="myitem">
+
+    </ul>
+
+    <script>
+        var myform= document.getElementById('myform');
+        var myinput=document.getElementById('myinput');
+        var myitem=document.getElementById('myitem');
+
+
+        myform.addEventListener("submit",function(event){
+            event.preventDefault()
+            createItem(myinput.value)
+        })
+
+        function createItem(inputItems){
+            var items = `<li>${inputitems}
+                <button onclick= 'deleteElement(this)'>Delete</button></li>`
+                myitem.insertAdjacentHTML('beforeend',items)
+                myinput.value = ''
+                myinput.focus()
+        }
+        function deleteElement(ElementToDelete){
+            ElementToDelete.parentElement.remove()
+        }
+    </script> -->
+
+
+
+
+    <h3>Add your To Do List here</h3>
+    <form id="myForm">
+        <input id="myInput" type="text">
+        <button> Add </button>
+    </form>
+    <h3>To Do List</h3>
+    <ul id="myItem"></ul>
+
+
+    <script>
+        var myForm = document.getElementById("myForm");
+        var myInput = document.getElementById("myInput");
+        var myItem = document.getElementById("myItem");
+        myForm.addEventListener("submit",
+            function (event) {
+                event.preventDefault()
+                createItem(myInput.value)
+            })
+
+        function createItem(inputItems) {
+            var items = `<li>${inputItems}
+                    <button onclick="deleteElement(this)">Delete</button> </li>`
+            myItem.insertAdjacentHTML("beforeend", items)
+            myInput.value = ""
+            myInput.focus()
+        }
+        function deleteElement(ElementToDelete) {
+            ElementToDelete.parentElement.remove()
+        }
+
+
+
+        var kk = document.getElementById("myForm").lastElementChild;
+        document.getElementById('myForm').lastElementChild.style.backgroundColor = "blue";
+        console.log(kk)
+        // document.getElementById('myForm').parentNode.style.backgroundColor="red";
+        document.getElementById('myForm').style.backgroundColor = "red";
+        document.getElementsByTagName("h3").innerHTML.style.backgroundColor = "blue";
+    </script>
+
+</body>
+
+</html>

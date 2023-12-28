@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Didital Clock</title>
+</head>
+<style>
+    /* span{
+        /* border: 1px solid grey; */
+        /* display: block;
+        display: inline-block; */ */
+    /* } */
+    .none{
+        border: none;
+    }
+</style>
+<body>
+
+    <div class="container" >
+        
+        <div class="clock" style="border: 1px solid grey ; background-color: aqua; width: 300px;text-shadow: 1px 1px ; box-shadow: 5px 5px;">
+
+            <h1 class="font">
+                <span id="hours">12</span>
+                <span class="none">:</span>
+                <span id="Minutes">60</span>
+                <span class="none">:</span>
+                <span id="Seconds">60</span>
+                <span class="none">:</span>
+                <span id="Am-or-pm">Am</span>
+                <!-- span inline block hia islye humnne span liya taki sab ek he line me aaye -->
+            </h1>
+        </div>
+    </div>
+    
+    <script>
+        function studyTime(){
+            a("Its times to get ready for the study");
+        };
+    
+    function updateTime(){
+        var dateTime = new Date ();
+        var hours = dateTime.getDate();
+        var Minutes = dateTime.getMinutes();
+        var Seconds= dateTime.getSeconds();
+        var Am_or_pm= document.getElementById("Am-or-pm");
+
+      if (hours >=12){
+        Am_or_pm.innerHTML="PM";
+
+      }
+      else{
+        Am_or_pm.innerHTML="AM";
+      }
+      if(hours > 12){
+        hours=hours-12;
+      }
+
+      document.getElementById("hours").innerHTML=hours;
+      document.getElementById("Minutes").innerHTML=Minutes;
+      document.getElementById("Seconds").innerHTML=Seconds;
+    }
+  
+setInterval(updateTime,1000);
+
+
+    </script>
+</body>
+</html>

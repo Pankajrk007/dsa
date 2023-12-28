@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function tower(n, s, d, h) {
+            if (n == 0) {
+                return
+            }
+            // console.log(n ,s,d,h);
+            tower(n - 1, s, h, d);
+            console.log('put disc ' + n + ' from ' + s + " to " + d);
+            tower(n - 1, h, d, s)
+        }
+        tower(3, 'a', "b", 'c');
+
+//  3 'a' 'b' 'c'
+//  2 'a' 'c' 'b'
+//  1 'a' 'b' 'c'
+//  put disc 1 from a to b
+//  put disc 2 from a to c
+//  1 'b' 'c' 'a'
+//  put disc 1 from b to c
+//  put disc 3 from a to b
+//  2 'c' 'b' 'a'
+//  1 'c' 'a' 'b'
+//  put disc 1 from c to a
+//  put disc 2 from c to b
+//  1 'a' 'b' 'c'
+//  put disc 1 from a to b
+
+    </script>
+</body>
+
+</html>

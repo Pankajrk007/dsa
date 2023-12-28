@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event</title>
+</head>
+
+<body>
+    <form id="myForm" onsubmit="submitFunction()">
+
+        Name :- <input type="text" id="fname" onfocus="focusFunction(this)" oninput="inputFunction(this)"   onblur="blurfunction(this)">
+        <br><br>
+        Address :- <input type="text"   onfocus="focusFunction(this)"  onblur="blurfunction(this)" onchange="chngeFunction(this)">
+        <br><br>
+        Country :-
+
+        <select name="" id=""   onfocus="focusFunction(this)" onchange="chngeFunction(this)" onblur="blurfunction(this)">
+            <option value="">India</option>
+            <option value="">Paksisthan</option> 
+            <option value="">America</option>
+            <option value="">China</option>
+        </select>
+<input type="submit">
+    </form>
+<br> 
+<div id="test" style="border: 1px solid red;" >hi dear </div>
+
+    <script>
+        function submitFunction(){
+            alert ("Thanks for submitting form");
+        }
+      function focusFunction(element) {
+            element.style.background = "lime";
+        } 
+        
+        function blurfunction(element) {
+            element.style.background = "";
+        } 
+
+        function inputFunction (element){
+            var x =element.value;
+            document.getElementById('test').innerHTML=x;
+        }
+
+        function chngeFunction(element ){
+            var x =element.value;
+            document.getElementById("test").innerHTML=x;
+        }
+    </script>
+</body>
+
+</html>

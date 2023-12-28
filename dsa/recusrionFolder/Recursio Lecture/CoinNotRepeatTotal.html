@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin should not be repeated and then sum it...</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function coinNotRepeat(idx, sum, psf, destSum, arr) {
+
+            if (sum > destSum) {
+                return;
+            }
+            if (sum == destSum) {
+                console.log(psf);
+                return;
+            }
+            if (idx == arr.length) {
+                return
+            }
+            // if we pick 
+            coinNotRepeat(idx + 1, sum + arr[idx], psf + arr[idx], destSum, arr);
+            // if we not pick 
+            coinNotRepeat(idx + 1, sum, psf, destSum, arr);
+
+        }
+        coinNotRepeat(0, 0, "", 6, [1, 2, 3, 6, 4, 5])
+    </script>
+</body>
+
+</html>

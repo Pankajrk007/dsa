@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-image: linear-gradient(to right, white, rgb(122, 199, 230));
+            /* display: flex;
+            justify-content: center; */
+            /* text-align: center; */
+            border: 1px solid black;
+            height: fit-content;
+            width: fit-content;
+            padding: 10px;
+        }
+
+        input {
+            width: 400px;
+            padding: 5px;
+        }
+
+        textarea {
+            width: 400px;
+            padding: 5px;
+        }
+
+        label {
+            font-weight: bolder;
+        }
+
+        .but {
+            background-color: aqua;
+            font-weight: bold;
+            width: 60px;
+            height: 25px;
+
+
+        }
+
+        input .but {
+            background-color: antiquewhite;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <!-- <h1>User Record list</h1> -->
+
+        <form id="Blood_Donation_Form">
+            <h1>User Blood Record list</h1>
+            <label for="User name">User name</label><br>
+            <input type="text" id="user_name" placeholder="Enter your Name" required>
+            <br>
+            <label for="Email Address">Email</label><br>
+            <input type="email" id="email" required placeholder="Enter your Email">
+            <br>
+            <label for="select your blood group">Blood group</label><br>
+            <input type="text" id="blood" required placeholder="A+">
+
+            <br>
+            <label for="Enter your address">Enter your address</label><br>
+            <textarea placeholder="Adress" id="Adress" name="Address" cols="50" rows="4"></textarea>
+            <br>
+            <label for="Enter your phone Number">Enter your phone Number</label><br>
+            <input type="text" id="phone" required placeholder="91+987465123">
+            <br>
+            <label for="health report">health report</label><br>
+            <textarea placeholder="health report" name="health report" id="health_report" cols="50" rows="4"></textarea>
+
+            <br>
+            <input type="submit" class="but">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var Cold_blooder = document.getElementById('Blood_Donation_Form');
+            Cold_blooder.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var user_name = document.getElementById("user_name").value;
+                var email = document.getElementById("email").value;
+                var blood = document.getElementById("blood").value;
+                var Adress = document.getElementById("Adress").value;
+                var phone = document.getElementById("phone").value;
+                var health_report = document.getElementById("health_report").value;
+
+                console.log(`My user_name is ${user_name}.
+            My email is ${email}.
+            My blood is ${blood}.
+            My Adress is ${Adress}.
+            My phone is ${phone}.
+            My health_report is ${health_report}.`)
+
+                var email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                var phone_regex = /^\d{10}$/;
+
+                if (email === "" || user_name === "" || phone === "" || Adress === "" || blood === "" || health_report === "") {
+                    alert("Field is empty")
+                    return;
+                }
+                if (!email_regex.test(email)) {
+                    alert("Please enter valid email Address")
+                    return;
+                }
+                if (!phone_regex.test(phone)) {
+                    alert("Please enter valid phone number")
+                    return;
+                }
+                alert("Form submitted successfully")
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

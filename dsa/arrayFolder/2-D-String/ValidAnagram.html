@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Valid Anagram with string</title>
+</head>
+
+<body>
+    <!-- Q - s ki value ko interchange karke naye word bana sakte hai  -->
+
+    <!-- we can solve this by 2 method 
+1 frequency aray method.
+2 sorting and comparing method . -->
+
+    <!-- 
+    <script>
+       var isAnagram = function(s, t) {
+    if (s.length != t.length) {
+        return false;
+    }
+
+    let f1 = Array(26).fill(0);
+    let f2 = Array(26).fill(0);
+
+    for (let i = 0; i < s.length; i++) {
+        let idx = s[i].charCodeAt() - 97;
+        f1[idx]++;
+    }
+
+    for (let i = 0; i < t.length; i++) {
+        let idx = t[i].charCodeAt() - 97;
+        f2[idx]++;
+    }
+
+    for (let i = 0; i < 26; i++) {
+        if (f1[i] !== f2[i]) {
+            return false;
+        }
+    }
+
+    return true;
+};
+console.log(isAnagram("listen", "silent")); // should log true
+console.log(isAnagram("hello", "world")); 
+
+    </script> -->
+
+
+    by sorting methdod;
+
+    <script>
+        var isAnagram = function (s, t) {
+            if (s.length != t.length) {
+                return false;
+
+            }
+
+            s = s.split('').sort();
+            t = t.split('').sort();
+            for (let i = 0; i < s.length; i++) {
+                if (s[i] !=t[i]) {
+                    return false
+                }
+                return true  
+            }
+           
+      };
+      console.log(isAnagram("listen", "silent")); // should log true
+            console.log(isAnagram("hello", "world"));
+       
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing Array</title>
+</head>
+<body>
+   <script>
+     let array = [4,"Pankaj","Akola"];
+     let [ranks,names,citys]= array;  //  new method to get array direct with out creating new variable by using let var or const
+    
+     console.log (ranks)
+     console.log (names)
+     console.log (citys)
+     console.log (array)
+
+
+   
+</script>
+
+<script>
+      function arr(){
+        return ["Pankaj",1,"Akola",]  // yaha array raturn kiya jo call karege tab naye varaible me shift ho jayege 
+
+     }    
+      let [name,rank,city]=arr();      //   yaha hume varible banayae aur usme return ki value store kardi 
+
+      console.log(name);
+
+      console.log(rank);
+      console.log(city);
+      console.log(`My name is ${ name} my rank is ${ rank} and I am from ${city}`)
+
+
+  
+</script>
+</body>
+</html>

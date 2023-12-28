@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond - pratice </title>
+</head>
+<body>
+    
+
+
+     <script>
+       for (var a=1; a<=5;a++){
+        for (var b=1;b<=a;b++){
+          document.write(" ");
+         
+          }
+          for (var b=1;b<=a;b++){
+            
+        }document.write("*");
+        document.write("<br>")
+
+      }
+ 
+
+
+    </script>
+
+    <script>
+         for (var a=4; a>=1;a--){
+            for (var b=1;b<=a;b++){
+                document.write("*");
+       
+            } document.write("<br>")
+         
+
+         for (var c=1; c<=5;c++){
+            for (var d=1;d<=c;d++){
+                document.write("*");
+       
+            } document.write("<br>")
+         }
+        }
+    </script> 
+
+    <script>
+
+        var mid=5;
+for ( var i= 1; i<=5;i++ ){
+    for (var s=1; s<=(mid-i); s++){
+        console.log(" ");
+    }
+    for ( var j=1; j<=i*2 - 1; j++){
+        console.log("*");
+    }console.log("<br>");
+}
+    </script>  
+    <script>
+
+        for (let i = 0; i < 5; i++) {
+        let gap = "";
+        for (let j = 5; j > i; j--) {
+
+            gap += " ";
+        }
+
+        for (let k = 0; k <= i; k++) {
+
+            gap += '*';
+        }
+
+        for (let l = 1; l <= i; l++) {
+            gap += '*';
+        }
+
+        console.log(gap);
+    }
+
+
+    for (let i = 5; i >= 0; i--) {
+        let gap = "";
+        for (let j = 5; j > i; j--) {
+
+            gap += " ";
+        }
+
+        for (let k = 0; k <= i; k++) {
+
+            gap += '*';
+        }
+
+        for (let l = 1; l <= i; l++) {
+            gap += '*';
+        }
+
+        console.log(gap);
+    }
+    </script>
+
+
+ <script>
+    for (var a=1; a<=5; a++){
+        for ( var b= 1; b<=a; b++){
+            document.write("&nbsp");
+        }
+        
+        for ( var c=1; c<=(a*2)-1; c++){
+            document.write("*");
+        }   document.write("<br>");
+
+    }
+</script>
+
+
+
+<!-- <script>
+    for (var a=1; a<=5; a++){
+        for ( var b= a; b<=4; b++){
+            document.write("&nbsp");
+        }
+        
+        for ( var c=1; c<=(a*2)-1; c++){
+            document.write("*");
+        }   document.write("<br>");
+
+    }
+</script> -->
+<script>
+
+var k=5;
+    for ( var a=1;a<=4;a++){
+        for ( var b =1;b<=a;b++){
+            document.write("&nbsp");
+        }
+
+      
+        for ( var c=1; c=2*(k-a)-1;c++){
+            document.write("*");
+        }document.write("<br>");
+    }
+</script>
+
+<script>
+    for ( var a=1 ; a<=5; a++){
+        for ( var b= 5; b>=a;b--){
+            document.write("*")
+        }
+    }
+    console.log("output is " + `*****
+                                ****
+                                ***
+                                **
+                                *`)
+</script>
+
+</body>
+</html>

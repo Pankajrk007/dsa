@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for Each loop</title>
+</head>
+what are variable in javascript ?
+
+<br>
+<br>
+
+<body>
+    <script>
+     let  arr  =["flight", "flow", "flower"];
+     let ans = [];
+     for (let i =0 ;i<arr[0].length;i++){
+        for (j = 1;j<arr.length;j++){
+          
+            if (arr[0][i] != arr[j][i]){
+                return ans.join();
+            }
+            ans.push(arr[0][i]);
+        }
+      return ans.join('')
+     }
+     
+      
+    </script>
+</body>
+
+</html>

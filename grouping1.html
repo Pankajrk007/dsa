@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .background-image,
+        text {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6qFC5WLDi24yeGvKmmRVOaEj-eA2MV5eGVA9vkZyo&s);
+            background-size: cover;
+            color: rgb(6, 11, 15);
+            padding: 0%;
+            margin: 0%;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="background-image">
+        <h1>User Registration Form</h1>
+        <hr>
+        <form>
+
+            <label for="First name">Enter your first name</label> : <input type="text" required>
+            <br><br>
+            <label for="email">Enter your Email id</label> <input type="text" placeholder="abc@gmail.com1">
+            <br><br>
+            <label for="contact">Enter your contact number</label> <input type="number">
+            <br><br>
+            <label for="Gender">Enter your Gender</label>
+            <input type="radio" name="Gender">Male
+            <input type="radio" name="Gender">Female
+            <input type="radio" name="Gender">others
+            <br><br>
+            <label for="Education">Select your Education</label>
+            <input type="Checkbox"> 10th
+            <input type="Checkbox"> 12th
+            <input type="Checkbox"> Graduate
+            <input type="Checkbox"> Post - Graduate
+            <br><br>
+            Select your city
+            <select name="dropdown" id="">dropdown
+                <option value="Akola">Akola</option>
+                <option value="Amravati">Amravati</option>
+                <option value="Akot">Akot</option>
+                <option value="Aurangabad">Aurangabad</option>
+            </select>
+            <br><br>
+            Enter your Birth Date <input type="date" min="30-01-2023" and max="1-01-2050">
+            <br><br>
+            Enter your user name : <input type="text" required placeholder="kjslk@gdkljglks"> <br><br>
+            Enter your password : <input type="password" required>
+            <br><br>
+            Tell me about you: <br>
+            <textarea name="Intro" id="" cols="20" rows="2"></textarea>
+            <br><br>
+            <button input="submit">Register</button> 
+            <button type="submit"> Cancel</button>
+        </form>
+    </div>
+</body>
+
+</html>

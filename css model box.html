@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Model Box</title>
+    <style>
+       
+   #div1{background-color: rgb(201, 26, 26);}
+        
+    
+        div{ background-color: aqua;}
+        p{
+            width: 320px;
+            padding: 10px;
+            border: 5px solid;
+            margin: 0%;
+        }
+       p.dotted{
+        border: dotted;
+       }
+       p.dashed{border: dashed;}
+       p.solid{border: solid;}
+       p.double{border: double;}
+       p.groovr{border: groove;}
+       p.ridge{border: ridge;}
+       p.inset{border: inset;}
+       p.outset{border: outset;}
+       p.none{border: none;}
+       p.hidder{border: hidden;}
+       p.mix{border-style:  dotted dashed solid double;}
+
+p.shorthand{ margin: 25px 50px 75px 100px;}
+       
+    </style>
+    
+</head>
+<body>
+<div id="div1">
+    <h1> Width and Height</h1>
+    <img src="rana.jpg" alt="Alone" width="350px" height="100px">
+    <p>The picture above is 350px wide. The total width of the element is 350px. </p>
+</div>
+
+<br>
+
+    <div class="border" style="background-color: yellow;">
+        <h2>
+            The border style property
+        </h2>
+        
+    The border specifies what kind of border to display
+        <p class="dotted "> A dotted border </p>
+        <p class="dashed"> A dashed border</p>
+        <p class="solid">A solid border</p>
+    <p class="double"> A double border</p>
+    <p class="groove"> A groove border</p>
+    <p class="ridge"> A ridge border</p>
+    <p class="inset">A inset border</p>
+    <p class="outset"> A outset border
+    </p>
+    <p class="none">A none border</p>
+<p class="hidder">A hidder border </p>
+<p class="mix"> A mix border</p>
+
+
+</div>
+
+<div>
+    <h1>The margin shorthand property</h1>
+
+    <p class="shorthand"> This p element has a top margin of 25px, a right margin of 50px a bottom margin of 75px, and the left margin of 100px</p>
+</div>
+
+</body>
+
+</html>

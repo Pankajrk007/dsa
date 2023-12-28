@@ -1,0 +1,31 @@
+.position{
+    background-color: aqua;
+    border: 2px solid rgb(137, 135, 139);
+    height: 200px;
+    top: 150px;
+}
+
+.property2{
+    position: fixed;
+    left: 110px;
+    
+
+}
+.para1{
+    color: cadetblue;
+}
+
+.class2{
+    border: 3px solid grey;
+    margin-top: 50px;
+    background-color: rgb(236, 252, 252);
+
+}
+
+.lucky{
+    border: 2px solid rgb(101, 184, 101);
+    background-color: rgb(190, 236, 221);
+    position: sticky;
+    padding: 5px;
+    top: 0px
+}

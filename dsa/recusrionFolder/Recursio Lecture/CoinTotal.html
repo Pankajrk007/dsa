@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin total using recursion</title>
+</head>
+<body>
+    
+    <script>
+
+     function PrintCoinTotal(currSum,psf,destSum,CoinArray){
+        if (currSum> destSum){
+            return;
+        }
+        if (currSum == destSum){
+            console.log(psf);
+            return
+        }
+       for (let coin of CoinArray){
+        PrintCoinTotal(currSum+coin,psf+coin+", ",destSum,CoinArray)
+       }
+     }
+     PrintCoinTotal(0,"",10,[1,2,5,10]);
+    </script>
+</body>
+</html>

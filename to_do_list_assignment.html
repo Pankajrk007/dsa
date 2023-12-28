@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Assignment</title>
+</head>
+<body>
+
+    <h3>Add your To Do List here</h3>
+    <form id="myForm">
+        <input id="myInput" type="text">
+        <button> Add </button>
+    </form>
+    <h3>To Do List</h3>
+    <ul id="myItem"></ul>
+    
+    <script>
+
+var myForm = document.getElementById("myForm");
+var myInput = document.getElementById("myInput");
+var myItem = document.getElementById("myItem");
+myForm.addEventListener("submit",
+function(event){
+    event.preventDefaultcreateItem(myInput.value)
+})
+    function createItem(inputItems){
+        var items = `<li>${inputItems}
+            <button onclick="deleteElement(this)">Delete</button>
+             </li>`
+             myItem.insertAdjacentHTML("beforeend", items)
+             myInput.value = "myInput.focus" ()
+            }
+            function deleteElement(ElementToDelete)
+            {
+                ElementToDelete.parentElement.remove()
+            }
+
+    </script>
+    
+
+
+
+
+
+<!--     
+    <h1> Add here to do list here</h1>
+    <form id="myform">
+       
+
+    <input id="myinput" type="text">
+
+    <input type="button" id="button1" value="add">
+
+    </form>
+    <h2>To Do list</h2>
+
+    <ul id="myitem" >
+
+    </ul>
+
+    <script>
+
+var myform = document.getElementById("myform");
+var myinput = document.getElementById("myinput");
+var myitem = document.getElementById("myitem");
+
+myform.addEventListener("submit",
+
+function event(){
+    event.preventDefault()
+    createItem(myinput.value)
+}
+)
+
+function createItem(inputitem){
+    var items = `<li>$ {inputitem}
+        <button onclick= "deleteelement(this)">Delete</button></li>`
+        myitem.insertAdjacentHTML("beforeend",items)
+        myinput.value=""
+        myinput.focus()
+
+
+    }
+
+    function deleteelement(elementtodelete){
+        elementtodelete.parentelement.remove()
+    }
+
+
+    </script> -->
+</body>
+</html>

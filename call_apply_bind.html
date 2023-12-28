@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call apply bind</title>
+</head>
+<body>
+    
+<!-- call apply and bind are noting but burrowing method to object  -->
+<!-- ye object se method (yani function ) ko borrow karte hai  -->
+    <script>
+
+console.log("=================Call method============================")
+        const person1= {
+            firstName : "virat",
+            lastName : "Kolhi",
+       cricket (greet,title){
+console.log(` ${greet} ${title} ${this.firstName} ${this.lastName}`)
+       }
+        }
+       person1.cricket("Hello","Mrs");
+const person2 = {
+    firstName : "Rohit",
+            lastName : "Sharma",
+}
+
+person1.cricket("Paksithan ka" ,"baap"); //normal call to object
+person1.cricket.call(person2 , "WEll" ,"Done"); //call person.method on call person 2
+person1.cricket.call(person2 , "love " ,"you");
+person3 ={
+
+}
+
+console.log("=====================Apply Method====================")
+person1.cricket.apply(person2 , ["WEll" ,"Done"]);//apply me bas  parameter array yani [] braces me deni padti hai
+person1.cricket.apply(person3 , ["WEll" ,"Done"]); 
+
+
+console.log("=====================bind Method=====================")
+
+const cricketer = person1.cricket.bind(person2 ); 
+cricketer("Kya khele" ,"Dada");
+
+
+
+
+//call karna hia toh : person1.cricket.call(person2 , "love " ,"you"); //object name +methodname+call, jisme call karna hai us object ka name fir parameter string me 
+//apply karna hai toh : person1.cricket.apply(person3 , ["WEll" ,"Done"]); //object name+methodname+apply, jisme apply karna hai us object ka name fir parameter array [] me 
+//bind karna hai toh : const cricketer = person1.cricket.bind(person2 ); //object name + method +bind+ second object name fir unko call karne k 
+  //                      cricketer("Kya khele" ,"Dada"); //jo variable banaya usme parameter deke call karo 
+
+    </script>
+</body>
+</html>

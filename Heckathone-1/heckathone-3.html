@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style for the navigation bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+    }
+
+    /* Style for the left side of the navigation bar */
+    .left-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Style for the logo */
+    .logo img {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    /* Style for the name and "How are you?" text */
+    .user-info {
+      margin-right: 10px;
+    }
+
+    /* Style for the follow button */
+    .follow-btn {
+      padding: 5px 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown-btn {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-right: 10px;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Style for the dropdown items */
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+     /* Style for radio buttons and checkboxes */
+     .radio-label,
+    .checkbox-label {
+      display: inline-block;
+      /* align-items:left; */
+    }
+
+    .radio-label input,
+    .checkbox-label input {
+      display: inline-block;
+      align-items: flex-end;
+      margin-right: 8px;
+    }
+
+    /* Change color on hover */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Style for the right side of the navigation bar */
+    .right-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Style for the block with "View Source" */
+    .view-source {
+      display: flex;
+      align-items: left;
+      background-color: #2ecc71;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    /* Style for the "View Source" text */
+    .view-source-text {
+      margin-right: 5px;
+    }
+
+    /* Style for SignUp and Login buttons */
+    .sign-up-btn, .login-btn {
+      padding: 8px 15px;
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    /* Style for the survey form */
+    .survey-form {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      margin-top: 20px;
+    }
+
+    form {
+      width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <!-- Left Side -->
+    <div class="left-nav">
+      <div class="logo">
+        <img src="path/to/your/logo1.png" alt="Logo1">
+      </div>
+      <div class="user-info">
+        <div class="name">
+            A Pen by
+            freeCodeCamp.org</div>
+        <div class="how-are-you">FCC : Survey Form</div>
+      </div>
+      <button class="follow-btn">Follow</button>
+     
+    </div>
+
+    <!-- Right Side -->
+    <div class="right-nav">
+      <div class="view-source">
+        <div class="logo">
+            <img src="path/to/your/logo2.png" alt="Logo2">
+          </div>
+        <div class="view-source-text">View Source Code</div>
+      
+      </div>
+      <button class="sign-up-btn">SignUp</button>
+      <button class="login-btn">Login</button>
+    </div>
+  </nav>
+
+   <!-- Dropdown Button -->
+   <div class="dropdown">
+    <button class="dropdown-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-width" viewBox="0 0 16 16">
+      <path d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+    </svg></button>
+    <!-- Dropdown Content -->
+    <div class="dropdown-content">
+      <a href="#">Item 1</a>
+      <a href="#">Item 2</a>
+      <a href="#">Item 3</a>
+    </div>
+  </div>
+  <!-- Survey Form -->
+  <div class="survey-form">
+    <h1>freeCodeCamp Survey Form</h1>
+    <p>Thank you for taking the time to help us improve the platform</p>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="description">Describe yourself:</label>
+      <textarea id="text" name="description" rows="1" required></textarea>
+
+   <label for="current-role">Which option best Describe your current role ? </label>
+      <select id="friendType" name="friendType">Select current role
+        <option value="student">Student</option>
+        <option value="full-times-jobs">Full time Jobs</option>
+        <option value="full-times-learner">full time learner</option>
+        <option value="prefer-not-to-say">prefer not to say</option>
+        <option value="other">other</option>
+      </select> 
+
+      <label>Would you recommend free Code Camp to your friend?</label>
+      <label><input type="radio" name="refer" value="yes"> Definetly</label>
+      <label><input type="radio" name="refer" value="no"> Maybe </label>
+      <label><input type="radio" name="refer" value="no"> Not Sure</label>
+
+    
+
+      <label for="favourite-feature">What is your favorite feature of free code camp. </label>
+      <select id="feature" name="feature" >
+        <option value="Challenge">Challenge</option>
+        <option value="Space">Space </option>
+        <option value="Community">Community</option>
+        <option value="Open Source">Open Source</option>
+      </select> 
+      <label>What would you like to see improved? (Check all that apply)</label>
+      <label><input type="checkbox" name="interests" value="Front-end-Projects"> Front-end Projects</label>
+      <label><input type="checkbox" name="interests" value="Back-end-Projects"> Back-end Projects</label>
+      <label><input type="checkbox" name="interests" value="Challenges"> Challenges</label>
+      <label><input type="checkbox" name="interests" value="Open Source Community"> Open Source Community</label>
+      <label><input type="checkbox" name="interests" value="Gitter help rooms"> Gitter help rooms</label>
+      <label><input type="checkbox" name="interests" value="Videos">Videos </label>
+      <label><input type="checkbox" name="interests" value="City Meetups"> City Meetups</label>
+      <label><input type="checkbox" name="interests" value="Wiki">Wiki</label>
+      <label><input type="checkbox" name="interests" value="Forum"> Forum</label>
+      <label><input type="checkbox" name="interests" value="Additional Courses"> Additional Courses</label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

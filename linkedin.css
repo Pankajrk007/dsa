@@ -1,0 +1,39 @@
+*{
+    margin: 0%;
+    padding: 0%;
+   
+}
+
+.navbar{
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.navbar-center{
+    display: block;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    
+
+}
+
+.navbar-center ul{
+    display: block;
+    display: inline-block;
+    justify-content:  
+
+}
+
+.navbar-right{
+    display: block;
+    text-align: right;
+}
+.navbar-right a image{
+    display: block;
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+    height: 100px;
+    border: 50%;
+}

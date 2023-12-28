@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP In Javascript</title>
+</head>
+
+<body>
+
+    simple oop example
+    <br>
+    <script>
+        class hello {
+
+            get_ready() {
+                var subha = new Date();
+                var hours = subha.getHours();
+                if (hours >= 0 && hours < 12) {
+                    this.morning();
+                }
+                else {
+                    this.night();
+
+                }
+            }
+
+
+
+            morning() {
+                document.write("Good morning Pankaj" + "<br>");
+            }
+            night() {
+                document.write("Good Night Pankaj" + "<br>")
+            }
+
+        }
+        let a = new hello;
+        a.morning();
+        a.night();
+        a.get_ready();
+    </script>
+    <h1>New script tag
+
+    </h1>
+    <script>
+        class student {
+            constructor(name) {
+                document.write("hello students");
+            }
+        }
+        let b = new student();
+    </script>
+
+    <h1>New script tag
+
+    </h1>
+    <script>
+        class students { //yaha humne class aur uska name  diya hai
+            constructor(name,age) {      // constructor method me parameter diya  hai. variable constriuctor me he banatte hai            
+                this.studentName = name; // this.studentName ek variable he hai bas target karnne this. lagaya hai. yaha humne variable bamaya aur this. ka use karke aur usme value set kar di parametr ki jo constructor me parameter diya hai
+                this.studentAge = age;
+                document.write(`Hello students <br>`); // ye statement hai jo contructor method k apne ap call hote he ye bhi aayega
+            }
+            hello() {  // fir humne hello nam ka method banaya jisme hum varible ki value set karenge
+                document.write(`hello ${this.studentName} your age is ${this.studentAge} <br> `) // yaha this. parameter me jo  value user dega vo hame likh k dega
+            }
+
+            static staticMethod(){ //ye static method jise call karne class name aur static method kki jarurat girti hai ex(students.staticMethod)
+                document.write("Static Method") // ye code hain jo is method ko call karne pr print hoga
+            }
+        }
+        let c = new students("Rana ji",25); // yaha ek new students nam ka object banaya let c nam ka  vvarible me .jab b object banao toh new ka use karna padta hai
+        c.hello(); //aur prototype hoto aise call karna padta hai //yaha hello nam k method ko call kiya  call karne k lie. 
+        let d = new students("Pankaj ji",85); //ye bas ek object  bana hai isko calll karne hamee object k variable name ko aur method ko dot lgake likhna hoga ex( d.hello()) // yaha ek new students nam ka object banaya let c nam ka  vvarible me .jab b object banao toh new ka use karna padta hai
+        d.hello(); 
+        students.staticMethod(); //class name dot static method ka name likh k he static method cal hoti hai
+
+   </script>
+</body>
+
+</html>

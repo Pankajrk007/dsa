@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert JSON Data</title>
+    <style>
+        /* Your existing styles remain unchanged */
+
+        .pagination-buttons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        #prev-btn, #next-btn {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .nav_section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        select, input {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .pagination-buttons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        #prev-btn, #next-btn {
+            margin-right: 10px;
+            cursor: pointer;
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #prev-btn:disabled, #next-btn:disabled {
+            background-color: #ddd;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        #search-text {
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teams Members</h1>
+        <section class="nav_section">
+            <div class="ns-left">
+                <select name="pagination" id="pagination" onchange="pagesize_dropdown()">
+                    <option value="5">5 per page</option>
+                    <option value="10" selected>10 per page</option>
+                    <option value="15">15 per page</option>
+                </select>
+            </div>
+            <div class="ns-right">
+                <input type="search" maxlength="15" id="search-text" placeholder="Enter search text" oninput="search()">
+            </div>
+        </section>
+        <div class="pagination-buttons">
+            <button id="prev-btn" onclick="prevPage()">Previous</button>
+            <button id="next-btn" onclick="nextPage()">Next</button>
+        </div>
+    </main>
+    
+    <table id="table-data">
+        <thead>
+            <tr>
+                <th>Id </th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var jasondata =[
+    {"id": 1, "name": "John Doe", "age": 28, "gender": "Male", "city": "New York"},
+    {"id": 2, "name": "Jane Smith", "age": 25, "gender": "Female", "city": "Los Angeles"},
+    {"id": 3, "name": "Bob Johnson", "age": 35, "gender": "Male", "city": "Chicago"},
+    {"id": 4, "name": "Alice Williams", "age": 30, "gender": "Female", "city": "Houston"},
+    {"id": 5, "name": "David Brown", "age": 40, "gender": "Male", "city": "Miami"},
+    {"id": 6, "name": "Emma Davis", "age": 22, "gender": "Female", "city": "San Francisco"},
+    {"id": 7, "name": "Michael Wilson", "age": 32, "gender": "Male", "city": "Seattle"},
+    {"id": 8, "name": "Olivia Miller", "age": 27, "gender": "Female", "city": "Austin"},
+    {"id": 9, "name": "William Jones", "age": 45, "gender": "Male", "city": "Boston"},
+    {"id": 10, "name": "Sophia Davis", "age": 29, "gender": "Female", "city": "Denver"},
+    {"id": 11, "name": "James White", "age": 33, "gender": "Male", "city": "Portland"},
+    {"id": 12, "name": "Ava Taylor", "age": 26, "gender": "Female", "city": "Phoenix"},
+    {"id": 13, "name": "Ethan Anderson", "age": 31, "gender": "Male", "city": "Dallas"},
+    {"id": 14, "name": "Mia Brown", "age": 24, "gender": "Female", "city": "Atlanta"},
+    {"id": 15, "name": "Daniel Martin", "age": 38, "gender": "Male", "city": "Detroit"},
+    {"id": 16, "name": "Chloe Thompson", "age": 23, "gender": "Female", "city": "Minneapolis"},
+    {"id": 17, "name": "Christopher Clark", "age": 36, "gender": "Male", "city": "Philadelphia"},
+    {"id": 18, "name": "Emily Turner", "age": 28, "gender": "Female", "city": "Charlotte"},
+    {"id": 19, "name": "Andrew Harris", "age": 34, "gender": "Male", "city": "San Diego"},
+    {"id": 20, "name": "Grace Moore", "age": 31, "gender": "Female", "city": "Las Vegas"},
+    {"id": 21, "name": "Jackson Wilson", "age": 40, "gender": "Male", "city": "Houston"},
+    {"id": 22, "name": "Lily Garcia", "age": 29, "gender": "Female", "city": "New York"},
+    {"id": 23, "name": "Nathan Rodriguez", "age": 27, "gender": "Male", "city": "Los Angeles"},
+    {"id": 24, "name": "Avery Johnson", "age": 25, "gender": "Female", "city": "Chicago"},
+    {"id": 25, "name": "Sofia Martinez", "age": 33, "gender": "Male", "city": "Miami"},
+    {"id": 26, "name": "Carter Thomas", "age": 22, "gender": "Female", "city": "San Francisco"},
+    {"id": 27, "name": "Ella Jackson", "age": 36, "gender": "Male", "city": "Seattle"},
+    {"id": 28, "name": "Owen Taylor", "age": 30, "gender": "Female", "city": "Austin"},
+    {"id": 29, "name": "Aria Adams", "age": 28, "gender": "Male", "city": "Boston"},
+    {"id": 30, "name": "Isaac Cooper", "age": 31, "gender": "Female", "city": "Denver"},
+    {"id": 31, "name": "Mila Evans", "age": 26, "gender": "Male", "city": "Portland"},
+    {"id": 32, "name": "Gabriel Moore", "age": 34, "gender": "Female", "city": "Phoenix"},
+    {"id": 33, "name": "Hudson Parker", "age": 29, "gender": "Male", "city": "Dallas"},
+    {"id": 34, "name": "Scarlett Harris", "age": 25, "gender": "Female", "city": "Atlanta"},
+    {"id": 35, "name": "Logan Clark", "age": 38, "gender": "Male", "city": "Detroit"},
+    {"id": 36, "name": "Zoe Turner", "age": 23, "gender": "Female", "city": "Minneapolis"},
+    {"id": 37, "name": "Lucas Garcia", "age": 36, "gender": "Male", "city": "Philadelphia"},
+    {"id": 38, "name": "Aubrey Moore", "age": 28, "gender": "Female", "city": "Charlotte"},
+    {"id": 39, "name": "Henry Harris", "age": 34, "gender": "Male", "city": "San Diego"},
+    {"id": 40, "name": "Emma Moore", "age": 31, "gender": "Female", "city": "Las Vegas"},
+    {"id": 41, "name": "Liam Wilson", "age": 40, "gender": "Male", "city": "Houston"},
+    {"id": 42, "name": "Ava Garcia", "age": 29, "gender": "Female", "city": "New York"},
+    {"id": 43, "name": "Mason Rodriguez", "age": 27, "gender": "Male", "city": "Los Angeles"},
+    {"id": 44, "name": "Madison Johnson", "age": 25, "gender": "Female", "city": "Chicago"},
+    {"id": 45, "name": "Elijah Martinez", "age": 33, "gender": "Male", "city": "Miami"}]
+
+  ;
+
+        let pageSize = 10;
+        let currentPage = 1;
+
+        function insert(data) {
+            var tableBody = document.getElementById('table-data').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            for (let i = 0; i < data.length; i++) {
+                var row = tableBody.insertRow(i);
+                var cell_1 = row.insertCell(0);
+                var cell_2 = row.insertCell(1);
+                var cell_3 = row.insertCell(2);
+                var cell_4 = row.insertCell(3);
+                var cell_5 = row.insertCell(4);
+
+                cell_1.innerHTML = data[i].id;
+                cell_2.innerHTML = data[i].name;
+                cell_3.innerHTML = data[i].age;
+                cell_4.innerHTML = data[i].gender;
+                cell_5.innerHTML = data[i].city;
+            }
+        }
+        // showPage function ka kaam hai table me data dikhana. Is function ko kisi bhi page number aur data ke sath call kiya ja sakta hai, aur ye specific page ke data ko table me display karta hai.
+        // Yeh function teen parameters leta hai:
+
+// page: Yeh parameter specify karta hai ki kaunsa page display karna hai.
+// data: Yeh parameter specify karta hai ki kaunsa data display karna hai. Default mein, yeh pura jasondata (sab members) hota hai.
+        function showPage(page, data) {  //page = cunnet page =1  //data  = jason data (45 object)
+        var startIndex = (page - 1) * pageSize; // (1-1)*10=0 means starting page "index" is 0;
+        var endIndex = startIndex + pageSize;// 0=10=10 i.e last page
+        var pageData = data.slice(startIndex, endIndex); // jason data.slice (0,10)
+        insert(pageData); //ye page data ki value ko insert function k parameter k data me store hogi
+    }
+
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage, jasondata);
+            }
+        }
+
+        function nextPage() {
+            var totalPages = Math.ceil(jasondata.length / pageSize);
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage, jasondata);
+            }
+        }
+
+        function search() {
+            var searchText = document.getElementById('search-text').value.toLowerCase();
+            var filteredData = jasondata.filter(function (item) {
+                return (
+                    item.name.toLowerCase().includes(searchText) ||
+                    item.id.toString().includes(searchText) ||
+                    item.gender.toLowerCase().includes(searchText) ||
+                    item.city.toLowerCase().includes(searchText)
+                );
+            });
+
+            currentPage = 1; // Reset to the first page after search
+            showPage(currentPage, filteredData);
+        }
+
+        function pagesize_dropdown() {
+            var select = document.getElementById('pagination');
+            var selectedPageSize = parseInt(select.value);
+            
+            if (!isNaN(selectedPageSize)) {
+                pageSize = selectedPageSize;
+                currentPage = 1; // Reset to the first page when changing page size
+                showPage(currentPage, jasondata);
+            }
+        }
+
+        // Call insert to display initial data
+        insert(jasondata);
+        showPage(currentPage, jasondata);
+    </script>
+</body>
+</html>
+
+<!-- diffecence between insert fucntion and showpage function 
+`showPage` aur `insert` functions dono table ke data ko display karne mein madad karte hain, lekin unka use thoda alag hai.
+
+1. **`showPage` function:**
+   - Is function ka kaam specific page ka data display karna hai. Yani, agar aap page 2 par hain toh sirf page 2 ka data dikhana.
+   - Is function me `data` parameter ke zariye pura dataset pass hota hai, lekin is function ke andar sirf current page ka data extract hota hai (`startIndex` se lekar `endIndex` tak).
+   - `showPage` function `insert` function ko call karta hai, lekin sirf current page ka data pass karke.
+
+2. **`insert` function:**
+   - Is function ka kaam hai saara data display karna, yaani ki `jasondata` array ko table ke tbody me insert karna.
+   - Isme pura dataset pass hota hai (`data` parameter ke roop me), aur saara data ek saath table me insert ho jata hai.
+
+In short, `showPage` function ek specific page ka data display karta hai, jabki `insert` function saara dataset display karta hai. `showPage` internally `insert` ko call karta hai, lekin sirf current page ka data pass karke. -->
+
+
+
+
+
+
+
+<!-- 
+`insert` function ka kaam hai table ke tbody me data ko insert karna. Yani, jab aap table ke data ko dikha rahe hain, toh yeh function un data ko table ke tbody me insert karta hai.
+
+Function ke kaam ka code is tarah hota hai:
+
+```javascript
+function insert(data) {
+    var tableBody = document.getElementById('table-data').getElementsByTagName('tbody')[0]; // tbody element ko select kiya jata hai
+    tableBody.innerHTML = ''; // tbody ke existing content ko clear kiya jata hai
+
+    for (let i = 0; i < data.length; i++) {
+        var row = tableBody.insertRow(i); // table ke tbody me ek new row insert ki jati hai
+        var cell_1 = row.insertCell(0); // row ke andar ek new cell insert ki jati hai
+        var cell_2 = row.insertCell(1);
+        var cell_3 = row.insertCell(2);
+        var cell_4 = row.insertCell(3);
+        var cell_5 = row.insertCell(4);
+
+        cell_1.innerHTML = data[i].id; // cell me data ka value set kiya jata hai
+        cell_2.innerHTML = data[i].name;
+        cell_3.innerHTML = data[i].age;
+        cell_4.innerHTML = data[i].gender;
+        cell_5.innerHTML = data[i].city;
+    }
+}
+```
+
+Yahan `tableBody` variable me table ke tbody element ko select kiya jaata hai. Phir uske `innerHTML` property ko use karke tbody ke existing content ko clear kiya jata hai. Uske baad `for` loop ka use karke `data` array me se har ek member ka data alag-alag cells me insert kiya jata hai. Is tarah se, `insert` function table ke tbody me data ko dikhaata hai. -->
+<!-- showPage function kya karta hai  -->
+<!-- `showPage` function ka kaam hai table me data dikhana. Is function ko kisi bhi page number aur data ke sath call kiya ja sakta hai, aur ye specific page ke data ko table me display karta hai.
+
+Yeh function teen parameters leta hai:
+
+1. **page:** Yeh parameter specify karta hai ki kaunsa page display karna hai.
+2. **data:** Yeh parameter specify karta hai ki kaunsa data display karna hai. Default mein, yeh pura `jasondata` (sab members) hota hai.
+
+Function ka kaam kuch steps me hota hai:
+
+1. **startIndex aur endIndex nikalna:** Page number aur page size ka use karke, `startIndex` aur `endIndex` calculate kiye jate hain. Yeh batata hai ki kaunse range ke data ko display karna hai.
+
+   ```javascript
+   var startIndex = (page - 1) * pageSize;
+   var endIndex = startIndex + pageSize;
+   ```
+
+2. **pageData nikalna:** `startIndex` aur `endIndex` ka use karke, `pageData` variable mein wo data rakha jata hai jo specific page par display hoga.
+
+   ```javascript
+   var pageData = data.slice(startIndex, endIndex);
+   ```
+
+3. **insert function se table me data dalna:** `insert` function ko call karke, `pageData` ko table me display kiya jata hai.
+
+   ```javascript
+   insert(pageData);
+   ```
+
+Is function ka use `prevPage`, `nextPage`, `search`, `pagesize_dropdown` aur `showCurrentPage` functions ke andar hota hai. Har baar jab aap kuch change karte hain (page change, search, page size change), tab `showPage` function ko call kiya jata hai jisse updated data display ho. -->
+
+
+
+<!-- `
+ -->
+
+
+
+
+ <!-- `nextPage` function ka kaam hai table ke data me ek page aage dikhaana, yaani ki next page par move karna. Yeh function check karta hai ki agar current page total pages se chhota hai, toh usse ek badha karke next page par le jaata hai.
+
+Function ke kaam ka code is tarah hota hai:
+
+```javascript
+function nextPage() {
+    var totalPages = Math.ceil(jasondata.length / pageSize); // total pages nikala jata hai
+
+    if (currentPage < totalPages) {
+        currentPage++; // current page ko ek se badha karke next page par le jaate hain
+        showPage(currentPage, jasondata); // showPage function ko call karke updated data display karte hain
+    }
+}
+```
+
+Yahan `totalPages` variable me total pages ka count hota hai, phir check hota hai ki current page total pages se kam hai ya nahi. Agar hai toh `currentPage` variable ko ek se badha karke `showPage` function ko call kiya jaata hai jisse table me next page ka data display ho. -->
+<!-- 
+
+
+
+`search` function ka kaam hai table ke data me search karna. Jab aap kuch search karte hain, toh yeh function un members ko filter karta hai jo search criteria ke saath match karte hain, aur phir table me sirf unhi members ko dikhata hai.
+
+Function ke kaam ka code is tarah hota hai:
+
+```javascript
+function search() {
+    var searchText = document.getElementById('search-text').value.toLowerCase(); // search text input ka value nikala jata hai
+    var filteredData = jasondata.filter(function (item) { // filter function ka use karke search criteria ke saath match karne wale data ko filter kiya jata hai
+        return (
+            item.name.toLowerCase().includes(searchText) ||
+            item.id.toString().includes(searchText) ||
+            item.gender.toLowerCase().includes(searchText) ||
+            item.city.toLowerCase().includes(searchText)
+        );
+    });
+
+    currentPage = 1; // search ke baad current page ko reset kiya jata hai, taki pehla page dikhaya ja sake
+    showPage(currentPage, filteredData); // showPage function ko call karke filtered data display karte hain
+}
+```
+
+Yahan `searchText` variable me search text input ka value rakha jata hai. Phir `filter` function ka use karke `jasondata` me se wo members filter kiye jaate hain jo search criteria ke saath match karte hain. Fir `currentPage` ko reset kiya jaata hai taki pehla page dikhaya ja sake, aur `showPage` function ko call kiya jaata hai jisse table me filtered data display ho. -->
+<!-- 
+
+
+
+`pagesize_dropdown` function ka kaam hai table ke data ko page size ke hisaab se update karna jab aap page size dropdown se koi option select karte hain.
+
+Function ke kaam ka code is tarah hota hai:
+
+```javascript
+function pagesize_dropdown() {
+    var select = document.getElementById('pagination'); // page size dropdown element ko select kiya jata hai
+    var selectedPageSize = parseInt(select.value); // selected dropdown value ko integer me convert kiya jata hai
+
+    if (!isNaN(selectedPageSize)) {
+        pageSize = selectedPageSize; // agar selected value valid hai, toh page size ko update kiya jata hai
+        currentPage = 1; // current page ko reset kiya jata hai taki pehla page dikhaya ja sake
+        showPage(currentPage, jasondata); // showPage function ko call karke updated data display karte hain
+    }
+}
+```
+
+Yahan `select` variable me page size dropdown element ko select kiya jaata hai. Fir uske `value` property se selected option ka value nikala jata hai. Agar ye value ek valid number hai, toh `pageSize` variable ko update kiya jaata hai. Fir `currentPage` ko reset kiya jaata hai taki pehla page dikhaya ja sake, aur `showPage` function ko call kiya jaata hai jisse table me updated data display ho. -->

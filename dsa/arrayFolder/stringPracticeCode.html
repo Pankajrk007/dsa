@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// Write a Program to check whether a string is blank or not.
+
+           function isBlank(input){
+            if (input.length ===0){
+                return true;
+            }else{
+                return false;
+
+            }
+          
+           }    console.log(isBlank(''));
+            console.log(isBlank('abc'));
+
+
+            // Write a Program to split a string and convert it into an array of words.
+
+            function stringToArray(str){
+                return str.trim().split(" ");
+            };
+            console.log(stringToArray("Hello World"));
+
+
+            // Write a Program to test whether the character at the provided (character) index isupper case.
+            // Example:- Input: 'JavaScript', 1Output: false
+
+            function isUpperCase (str, index){
+                return str.charAt(index).toUpperCase()=== str.charAt(index);
+            }
+            console.log(isUpperCase("Javascript",1))
+            console.log(isUpperCase("JAVA",1))
+
+
+            // Write a Program to convert a string in abbreviated form.
+            // Example:- Input: 'Virat Kohli'Output:- Virat K.
+    </script>
+</body>
+</html>

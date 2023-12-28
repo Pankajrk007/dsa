@@ -1,0 +1,115 @@
+/* *{
+    margin: 0%;
+    padding: 0%;
+} */
+
+.container{
+    background-color: aliceblue;
+    border: 1px solid ;
+    width: 350px;
+    height: 260px;
+    display: grid;
+    
+   
+}
+
+h1{
+    font-family: sans-serif;
+    padding-left: 20px;
+    
+}
+.day1{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-left: 10px; */
+    background-color: antiquewhite;
+    grid-template-columns: auto auto auto auto auto auto auto;
+
+    width: 300px;
+    height: 25px;
+}
+.day2{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-top: 5px;
+    padding-left: 35px; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+   
+    width: 300px;
+    height: 25px;
+    /* text-align: justify; */
+}
+.day3{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-top: 5px;
+    padding-left: 34px; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+    
+    width: 300px;
+    height: 25px;
+    /* text-align: justify; */
+}
+.day4{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-top: 5px;
+    padding-left: 10px; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+   
+    width: 300px;
+    height: 25px;
+    /* text-align: justify; */
+}
+.day5{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-top: 5px;
+    padding-left: 10px; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+  
+    width: 300px;
+    height: 25px;
+    text-align: justify;
+}
+
+.day5{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-top: 5px;
+    padding-left: 10px; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+
+    width: 300px;
+    height: 25px;
+   
+}
+
+
+
+.day6{
+    display: grid;
+    text-align: end;
+    /* grid-gap: 10px;
+    padding-top: 5px;
+    padding-left: 10px; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+   
+    width: 300px;
+    height: 25px;
+  
+}
+
+/* .days{
+    display: grid;
+    padding: 10px; */
+
+
+
+

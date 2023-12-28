@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+      let n =5 ;
+      let s= "";
+      for ( let i =n;i>=1;i--){
+        let star = i;
+        let space = n-i;
+
+        while(space>0){
+            s+=" "
+            space--
+        }
+    while(star >0){
+        s+="*"
+        star--
+    }
+    s+="\n"
+    }
+    console.log(s)
+    </script> -->
+
+<script>
+    let s="";
+    let n=5;
+ 
+console.log(s);
+    for (let i=1;i<=n;i++){
+       let  space=n-i;
+       console.log(s);
+       console.log(space+" : space");
+   let star=i;
+
+
+   while (space>0){
+    console.log(s);
+    console.log(space+"space");
+    console.log(star+"star")
+
+
+    s+="_ "
+    console.log(s);
+    console.log(space+"space");
+    console.log(star+"star")
+
+
+    space--;
+    console.log(s);
+    console.log(space+"space");
+    console.log(star+"star")
+
+
+   }while(star>0){
+    console.log(s);
+    console.log(space+"space");
+    console.log(star+"star")
+
+
+    s+="* ";
+    console.log(s);
+    console.log(space+"space");
+    console.log(star+"star")
+
+
+    star--
+    console.log(s);
+    console.log(space+"space");
+    console.log(star+"star")
+
+
+   }
+   console.log(s);
+   console.log(space);
+   console.log(star)
+
+
+   s+="\n";
+   console.log(s);
+   console.log(space);
+   console.log(star)
+
+
+    }
+    console.log(s);
+</script>
+
+</body>
+</html>
+<!-- 
+Sum2Array.html:33 
+Sum2Array.html:36 
+Sum2Array.html:37 4 : space
+Sum2Array.html:42 
+Sum2Array.html:43 4space
+Sum2Array.html:44 1star
+Sum2Array.html:48 _ 
+Sum2Array.html:49 4space
+Sum2Array.html:50 1star
+Sum2Array.html:54 _ 
+Sum2Array.html:55 3space
+Sum2Array.html:56 1star
+Sum2Array.html:42 _ 
+Sum2Array.html:43 3space
+Sum2Array.html:44 1star
+Sum2Array.html:48 _ _ 
+Sum2Array.html:49 3space
+Sum2Array.html:50 1star
+Sum2Array.html:54 _ _ 
+Sum2Array.html:55 2space
+Sum2Array.html:56 1star
+Sum2Array.html:42 _ _ 
+Sum2Array.html:43 2space
+Sum2Array.html:44 1star
+Sum2Array.html:48 _ _ _ 
+Sum2Array.html:49 2space
+Sum2Array.html:50 1star
+Sum2Array.html:54 _ _ _ 
+Sum2Array.html:55 1space
+Sum2Array.html:56 1star
+Sum2Array.html:42 _ _ _ 
+Sum2Array.html:43 1space
+Sum2Array.html:44 1star
+Sum2Array.html:48 _ _ _ _ 
+Sum2Array.html:49 1space
+Sum2Array.html:50 1star
+Sum2Array.html:54 _ _ _ _ 
+Sum2Array.html:55 0space
+Sum2Array.html:56 1star
+Sum2Array.html:60 _ _ _ _ 
+Sum2Array.html:61 0space
+Sum2Array.html:62 1star
+Sum2Array.html:66 _ _ _ _ * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 1star
+Sum2Array.html:72 _ _ _ _ * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 0star
+Sum2Array.html:78 _ _ _ _ * 
+Sum2Array.html:79 0
+Sum2Array.html:80 0
+Sum2Array.html:84 _ _ _ _ * 
+
+Sum2Array.html:85 0
+Sum2Array.html:86 0
+Sum2Array.html:36 _ _ _ _ * 
+
+Sum2Array.html:37 3 : space
+Sum2Array.html:42 _ _ _ _ * 
+
+Sum2Array.html:43 3space
+Sum2Array.html:44 2star
+Sum2Array.html:48 _ _ _ _ * 
+_ 
+Sum2Array.html:49 3space
+Sum2Array.html:50 2star
+Sum2Array.html:54 _ _ _ _ * 
+_ 
+Sum2Array.html:55 2space
+Sum2Array.html:56 2star
+Sum2Array.html:42 _ _ _ _ * 
+_ 
+Sum2Array.html:43 2space
+Sum2Array.html:44 2star
+Sum2Array.html:48 _ _ _ _ * 
+_ _ 
+Sum2Array.html:49 2space
+Sum2Array.html:50 2star
+Sum2Array.html:54 _ _ _ _ * 
+_ _ 
+Sum2Array.html:55 1space
+Sum2Array.html:56 2star
+Sum2Array.html:42 _ _ _ _ * 
+_ _ 
+Sum2Array.html:43 1space
+Sum2Array.html:44 2star
+Sum2Array.html:48 _ _ _ _ * 
+_ _ _ 
+Sum2Array.html:49 1space
+Sum2Array.html:50 2star
+Sum2Array.html:54 _ _ _ _ * 
+_ _ _ 
+Sum2Array.html:55 0space
+Sum2Array.html:56 2star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ 
+Sum2Array.html:61 0space
+Sum2Array.html:62 2star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 2star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 1star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 1star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 1star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 0star
+Sum2Array.html:78 _ _ _ _ * 
+_ _ _ * * 
+Sum2Array.html:79 0
+Sum2Array.html:80 0
+Sum2Array.html:84 _ _ _ _ * 
+_ _ _ * * 
+
+Sum2Array.html:85 0
+Sum2Array.html:86 0
+Sum2Array.html:36 _ _ _ _ * 
+_ _ _ * * 
+
+Sum2Array.html:37 2 : space
+Sum2Array.html:42 _ _ _ _ * 
+_ _ _ * * 
+
+Sum2Array.html:43 2space
+Sum2Array.html:44 3star
+Sum2Array.html:48 _ _ _ _ * 
+_ _ _ * * 
+_ 
+Sum2Array.html:49 2space
+Sum2Array.html:50 3star
+Sum2Array.html:54 _ _ _ _ * 
+_ _ _ * * 
+_ 
+Sum2Array.html:55 1space
+Sum2Array.html:56 3star
+Sum2Array.html:42 _ _ _ _ * 
+_ _ _ * * 
+_ 
+Sum2Array.html:43 1space
+Sum2Array.html:44 3star
+Sum2Array.html:48 _ _ _ _ * 
+_ _ _ * * 
+_ _ 
+Sum2Array.html:49 1space
+Sum2Array.html:50 3star
+Sum2Array.html:54 _ _ _ _ * 
+_ _ _ * * 
+_ _ 
+Sum2Array.html:55 0space
+Sum2Array.html:56 3star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ 
+Sum2Array.html:61 0space
+Sum2Array.html:62 3star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 3star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 2star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 2star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 2star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 1star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 1star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 1star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 0star
+Sum2Array.html:78 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+Sum2Array.html:79 0
+Sum2Array.html:80 0
+Sum2Array.html:84 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+
+Sum2Array.html:85 0
+Sum2Array.html:86 0
+Sum2Array.html:36 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+
+Sum2Array.html:37 1 : space
+Sum2Array.html:42 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+
+Sum2Array.html:43 1space
+Sum2Array.html:44 4star
+Sum2Array.html:48 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ 
+Sum2Array.html:49 1space
+Sum2Array.html:50 4star
+Sum2Array.html:54 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ 
+Sum2Array.html:55 0space
+Sum2Array.html:56 4star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ 
+Sum2Array.html:61 0space
+Sum2Array.html:62 4star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 4star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 3star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 3star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 3star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 2star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 2star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 2star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 1star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 1star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 1star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 0star
+Sum2Array.html:78 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+Sum2Array.html:79 0
+Sum2Array.html:80 0
+Sum2Array.html:84 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+
+Sum2Array.html:85 0
+Sum2Array.html:86 0
+Sum2Array.html:36 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+
+Sum2Array.html:37 0 : space
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+
+Sum2Array.html:61 0space
+Sum2Array.html:62 5star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* 
+Sum2Array.html:67 0space
+Sum2Array.html:68 5star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* 
+Sum2Array.html:73 0space
+Sum2Array.html:74 4star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* 
+Sum2Array.html:61 0space
+Sum2Array.html:62 4star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 4star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 3star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 3star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 3star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 2star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 2star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 2star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 1star
+Sum2Array.html:60 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * 
+Sum2Array.html:61 0space
+Sum2Array.html:62 1star
+Sum2Array.html:66 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * * 
+Sum2Array.html:67 0space
+Sum2Array.html:68 1star
+Sum2Array.html:72 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * * 
+Sum2Array.html:73 0space
+Sum2Array.html:74 0star
+Sum2Array.html:78 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * * 
+Sum2Array.html:79 0
+Sum2Array.html:80 0
+Sum2Array.html:84 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * * 
+
+Sum2Array.html:85 0
+Sum2Array.html:86 0
+Sum2Array.html:90 _ _ _ _ * 
+_ _ _ * * 
+_ _ * * * 
+_ * * * * 
+* * * * *  -->

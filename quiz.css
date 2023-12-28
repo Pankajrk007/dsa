@@ -1,0 +1,63 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: bisque;
+    background-image: linear-gradient(80deg,rgb(225, 115, 115) ,orange );
+    font-family: sans-serif;
+}
+.container{
+    text-align: center;
+    width: 450px;
+    font-size: 20px;
+
+}
+#title{
+    /* background-color: rgb(231, 133, 41); */
+    text-align: center;
+
+}
+#progressBar{
+    /* background-color: rgb(69, 172, 69); */
+    justify-content: space-between;
+    /* margin: 10px;
+    padding-right: 20px;
+    padding: 10px; */
+    /* width: 200px; */
+}
+#question{
+    background-color: rgb(146, 158, 146);
+
+}
+#score{
+    background-color: rgb(146, 158, 146);
+    
+    /* margin: 10px;
+    padding-right: 20px;
+    padding: 10px;
+    width: 200px; */
+}
+#content{
+    /* background-color: rgb(75, 89, 75); */
+    padding-top: 100px;
+    margin: 10px;
+    padding-left: 400px;
+    padding-right: 400px;
+
+    /* width: 200px; */
+
+}
+#next-button{
+    /* background-color: green; */
+    margin-top: 50px;
+    /* padding: 10px; */
+    /* padding: 100px; */
+    /* width: 200px; */
+    padding-left: 400px;
+    padding-right: 400px;
+
+}

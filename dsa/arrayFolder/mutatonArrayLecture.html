@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation Arrays</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // for inseting number in a array;
+        let A = [3,4,2,5,2,5,3,5];
+        function insertItemAtIndex (A,index,data){
+            let i = A.length -1;
+            while (i>index){
+                A[i] = A[i-1];
+                i--;
+
+            }
+
+            A[i]= data;
+console.log(A);
+        }
+        insertItemAtIndex(A,2,8);
+
+// for deleting number form the array;
+
+function deletingItemATIndex(A,index,g){
+    for ( let i = index; i< A.length -1; i++){
+        A[i] = A[i+1];
+
+        console.log(A);
+    }
+}
+deletingItemATIndex(A,2,5)
+
+
+// for updating value inside array 
+
+
+function updateItemAIndex (A, index , data){
+    A[index] = data;
+
+}
+
+// Swappping  numbers in array 
+
+function swapitem ( A,sourceIndex,destinationIndex){
+    let temp = A[destinationIndex];
+    A[destinationIndex]= A[sourceIndex];
+    A[sourceIndex]=temp
+    console.log(A);
+}
+swapitem(A,2.4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Febonachi number </title>
+</head>
+<body>
+    
+<script>
+
+
+    
+function Febonachi(n){
+        let prev = 0;
+        let curr = 1;
+        console.log(prev);
+        while(n>0){
+            console.log(curr);
+            let temp = curr;
+            curr=prev+curr;
+            prev= temp;
+            n--;
+        }
+    }
+function Febonachirecur(n){
+    if (n==0) return 0 ;
+    if (n ==1)return 1 ;
+    let im1 = Febonachirecur(n-1);
+    let im2 = Febonachirecur(n-2);
+    return im1+im2;
+
+}
+console.log(Febonachirecur(3))
+</script>
+</body>
+</html>

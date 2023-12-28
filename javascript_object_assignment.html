@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects - Practice Code</title>
+</head>
+<body>
+    
+<!-- 
+    <script>
+        
+    const k = [
+        {Neha: "Pizza",
+         Rahul : 'ice cream',
+         Ram: 'Burger',
+         Shyam : 'Spring Rolls'
+        }
+    ];
+
+    console.log(k);
+    </script>
+
+
+<script>
+
+
+    let property ={
+        father : "Shankar",
+        mother : 'moni',
+        son1 : 'Prakash',
+        son2 : 'Kailash',
+        son3 : 'Suresh',
+
+    }
+
+
+    console.log ( property);
+    
+</script>
+
+<script>
+    let data = {
+        Name : 'Rahul Verma',
+        Class : '10th',
+        Rollno : 31,
+        Subject : 'English',
+        Marks : 34
+    }
+
+    console.log ( data);
+    console.log ( 'before deleting');
+
+
+</script> -->
+
+<br><br>
+
+
+<script>
+
+    function arr2obj(arr){
+        let obj={ };
+
+        array.forEach((v) => {
+            let key = v[0];
+            let value = v[1];
+            object[key] = value;
+        });
+
+        return obj;
+    }
+
+
+    console.log(
+        arr2obj([
+            ["Ram",'Burger'],
+            ['Shyam', 'Spring Rolls'],
+            ['Rahul', 'Pizza'],
+            ['Neha', 'ice-Cream'],
+        ])
+    );
+</script>
+
+
+<script type="text/javascript">
+function arr2obj(arr) {
+    let obj = {};
+    arr.forEach((v) => {
+    let key = v[0];
+    let value = v[1];
+    obj[key] = value;
+});
+return obj;
+}
+console.log(arr2obj([
+    ["Ram","Burger" ],
+    ["Shyam", "Spring Rolls"],
+    ["Rahul", "Pizza"],
+    ["Neha", "Ice Cream"],
+    ]));
+    </script>
+
+
+<br>
+<br>
+
+    </body>
+    </html>
+</body>
+</html>

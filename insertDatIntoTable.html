@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Jason Data into Table</title>
+</head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+
+<body>
+
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name </th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        var  jsonData = [
+    {"id": 1, "name": "John Doe", "age": 28, "gender": "Male", "city": "New York"},
+    {"id": 2, "name": "Jane Smith", "age": 25, "gender": "Female", "city": "Los Angeles"},
+    {"id": 3, "name": "Bob Johnson", "age": 35, "gender": "Male", "city": "Chicago"},
+    {"id": 4, "name": "Alice Williams", "age": 30, "gender": "Female", "city": "Houston"},
+    {"id": 5, "name": "David Brown", "age": 40, "gender": "Male", "city": "Miami"},
+    {"id": 6, "name": "Emma Davis", "age": 22, "gender": "Female", "city": "San Francisco"},
+    {"id": 7, "name": "Michael Wilson", "age": 32, "gender": "Male", "city": "Seattle"},
+    {"id": 8, "name": "Olivia Miller", "age": 27, "gender": "Female", "city": "Austin"},
+    {"id": 9, "name": "William Jones", "age": 45, "gender": "Male", "city": "Boston"},
+    {"id": 10, "name": "Sophia Davis", "age": 29, "gender": "Female", "city": "Denver"},
+    {"id": 11, "name": "James White", "age": 33, "gender": "Male", "city": "Portland"},
+    {"id": 12, "name": "Ava Taylor", "age": 26, "gender": "Female", "city": "Phoenix"},
+    {"id": 13, "name": "Ethan Anderson", "age": 31, "gender": "Male", "city": "Dallas"},
+    {"id": 14, "name": "Mia Brown", "age": 24, "gender": "Female", "city": "Atlanta"},
+    {"id": 15, "name": "Daniel Martin", "age": 38, "gender": "Male", "city": "Detroit"},
+    {"id": 16, "name": "Chloe Thompson", "age": 23, "gender": "Female", "city": "Minneapolis"},
+    {"id": 17, "name": "Christopher Clark", "age": 36, "gender": "Male", "city": "Philadelphia"},
+    {"id": 18, "name": "Emily Turner", "age": 28, "gender": "Female", "city": "Charlotte"},
+    {"id": 19, "name": "Andrew Harris", "age": 34, "gender": "Male", "city": "San Diego"},
+    {"id": 20, "name": "Grace Moore", "age": 31, "gender": "Female", "city": "Las Vegas"},
+    {"id": 21, "name": "Jackson Wilson", "age": 40, "gender": "Male", "city": "Houston"},
+    {"id": 22, "name": "Lily Garcia", "age": 29, "gender": "Female", "city": "New York"},
+    {"id": 23, "name": "Nathan Rodriguez", "age": 27, "gender": "Male", "city": "Los Angeles"},
+    {"id": 24, "name": "Avery Johnson", "age": 25, "gender": "Female", "city": "Chicago"},
+    {"id": 25, "name": "Sofia Martinez", "age": 33, "gender": "Male", "city": "Miami"},
+    {"id": 26, "name": "Carter Thomas", "age": 22, "gender": "Female", "city": "San Francisco"},
+    {"id": 27, "name": "Ella Jackson", "age": 36, "gender": "Male", "city": "Seattle"},
+    {"id": 28, "name": "Owen Taylor", "age": 30, "gender": "Female", "city": "Austin"},
+    {"id": 29, "name": "Aria Adams", "age": 28, "gender": "Male", "city": "Boston"},
+    {"id": 30, "name": "Isaac Cooper", "age": 31, "gender": "Female", "city": "Denver"},
+    {"id": 31, "name": "Mila Evans", "age": 26, "gender": "Male", "city": "Portland"},
+    {"id": 32, "name": "Gabriel Moore", "age": 34, "gender": "Female", "city": "Phoenix"},
+    {"id": 33, "name": "Hudson Parker", "age": 29, "gender": "Male", "city": "Dallas"},
+    {"id": 34, "name": "Scarlett Harris", "age": 25, "gender": "Female", "city": "Atlanta"},
+    {"id": 35, "name": "Logan Clark", "age": 38, "gender": "Male", "city": "Detroit"},
+    {"id": 36, "name": "Zoe Turner", "age": 23, "gender": "Female", "city": "Minneapolis"},
+    {"id": 37, "name": "Lucas Garcia", "age": 36, "gender": "Male", "city": "Philadelphia"},
+    {"id": 38, "name": "Aubrey Moore", "age": 28, "gender": "Female", "city": "Charlotte"},
+    {"id": 39, "name": "Henry Harris", "age": 34, "gender": "Male", "city": "San Diego"},
+    {"id": 40, "name": "Emma Moore", "age": 31, "gender": "Female", "city": "Las Vegas"},
+    {"id": 41, "name": "Liam Wilson", "age": 40, "gender": "Male", "city": "Houston"},
+    {"id": 42, "name": "Ava Garcia", "age": 29, "gender": "Female", "city": "New York"},
+    {"id": 43, "name": "Mason Rodriguez", "age": 27, "gender": "Male", "city": "Los Angeles"},
+    {"id": 44, "name": "Madison Johnson", "age": 25, "gender": "Female", "city": "Chicago"},
+    {"id": 45, "name": "Elijah Martinez", "age": 33, "gender": "Male", "city": "Miami"}]
+
+// agar json data kam hai toh variable me le kar aisa kar sakte ho 
+// agar json-data bada hai toh fetch method ka use kare 
+
+// var  jsonData ;
+//         fetch ("jason_dummy_data.json")
+//         .then(Response=> Response.json())
+//         .then(data=> {
+//             jsonData=data;
+//             insertDataIntoTable();
+//         })
+//         .catch(error=> console.log('error fetching data',error));  
+           
+            function insertDataIntoTable() {
+      var tableBody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
+           
+            for (var i = 0; i < jsonData.length; i++) {
+               
+                var row = tableBody.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+
+                cell1.innerHTML = jsonData[i].id;
+                cell2.innerHTML = jsonData[i].name;
+                cell3.innerHTML = jsonData[i].age;
+                cell4.innerHTML = jsonData[i].gender;
+                cell5.innerHTML = jsonData[i].city;
+
+            }
+        }
+
+        insertDataIntoTable();
+    </script>
+
+</body>
+
+</html>

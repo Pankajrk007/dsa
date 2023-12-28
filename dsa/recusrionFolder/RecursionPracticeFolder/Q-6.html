@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Write a Program to find the power of a number using a recursive method wherebase and exponent is entered by the user</h4>
+
+<script>
+    var exponent = function(a,n){
+        if (n==0){
+            return 1;
+
+        }else{
+            return a * exponent (a,n-1);
+        }
+    };
+    document.write(exponent(5,2))
+</script>
+
+
+
+<!-- 
+Step-wise breakdown:
+
+1. Function `exponent` ko define kiya gaya hai jo do parameters leta hai, `a` (base) aur `n` (exponent).
+   
+2. `if (n == 0)` ke andar check kiya jata hai ki kya `n` zero hai ya nahi. Agar `n` zero hai, toh function 1 return karega, kyun ki koi bhi number power zero par 1 hota hai.
+
+3. Agar `n` non-zero hai, toh `return a * exponent(a, n - 1);` statement se recursion ka use kiya gaya hai. Yahan base case (n == 0) tak pahunchte pahunchte har bar `a` se multiply hota jaata hai.
+
+4. `document.write(exponent(5, 2))` se function ko call kiya gaya hai jisme `a` ko 5 aur `n` ko 2 diya gaya hai. Iska matlab hai ki 5 ko square (5^2) karna hai.
+
+Ab yeh breakdown table mein dekhte hain:
+
+| Iteration | `a`   | `n`   | Expression                     | Output  |
+|-----------|-------|-------|---------------------------------|---------|
+| Initial   | 5     | 2     | exponent(5, 2)                  |         |
+| Recursion | 5     | 1     | 5 * exponent(5, 1)              |         |
+| Recursion | 5     | 0     | 5 * 5 * exponent(5, 0)          |         |
+| Base Case | -     | -     | 5 * 5 * 1                       | 25      |
+
+Final output is 25. Is table mein har step par `a`, `n`, expression aur output ko dekha ja sakta hai. Koi aur clarification chahiye toh poochiye! -->
+</body>
+</html>

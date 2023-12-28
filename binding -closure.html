@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+let animal = {
+    name: "rabbit",
+    run: function(speed){
+        document.write(this.name+ "run at" + speed +"mph");
+
+    }
+   }
+
+   let bird= {
+    name: "Eagle",
+    fly : function(speed){
+        document.write(this.name +"flies at"+ speed +"mph");
+    }
+   }
+
+   let fn = animal.run.bind(bird, 20);
+   fn();
+    </script>
+<br>
+    <script>
+        let mobile = {
+            brand: "Apple",
+            quality: "Awsm",
+            camera : function(hi){
+                document.write(this.brand+ " has "+ this.quality+ " photo quality " + hi +" Oneplus ");
+            }
+        }
+        let laptop = {
+            brand: "Dell",
+            waranty: " and waranty for two year",
+            display : function(hello){
+                document.write(this.brand+ " has super processor "+ hello + " lenovo "+this.waranty );
+            }
+        }
+
+        let device = laptop.display.bind(mobile, "than");
+        device();
+
+    </script>
+<br><br>
+
+<script>
+    let mobil ={
+        name: "Apple",
+        price: "50k",
+        camera: function(hu){
+            document.write(this.name +' cost for '+ this.price+hu);
+        }
+    }
+    let lapto ={
+        name : "lemovo",
+        price :"5000",
+        processor: function(tu){
+            document.write(this.name +' cost for '+ this.price+tu); 
+        }
+    }
+    let devic = lapto.processor.bind(mobil,"/- only");
+    devic();
+    
+    </script>
+
+<br>
+
+<script>
+    let  India= {
+         Army : "Powerfull",
+         power:function(jai){
+            document.write("India is "+this.Army+" " + jai + " Pakisthan ")
+         } 
+    }
+
+    let Pakisthan={
+        Army : "Not Powerfull",
+        strength:function(hind){
+            document.write("Pakisthan is "+ this.Army+ " " + hind+" India")
+        }
+    }
+    let strongest= Pakisthan.strength.bind(India,"than");
+strongest();
+</script>
+</body>
+</html>

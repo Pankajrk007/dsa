@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+
+    <!-- Normal function with parameter and using back tick and dollar sign  -->
+    <script>
+        function sum(name,education){
+            document.write(`Heloo ${name} your education is ${education}`);
+
+        }
+        sum("Pankaj","BE")
+    </script>
+<br>
+
+<script>
+    function sum(name,education,...rest_argument){
+        document.write(`Heloo ${name} your education is ${education} and you got : `);
+// argumens ki addition perform karne hum for in loop ka use karenge 
+
+let sum = 0;
+for (let i in rest_argument){
+sum += rest_argument[i];
+
+
+}
+document.write(sum +" <br>")
+    }
+    sum("Pankaj","BE",50,66,85,62,82)
+</script>
+</body>
+</html>

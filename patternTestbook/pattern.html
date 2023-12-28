@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        
+let n = 4;
+let s = "";
+
+document.write("=====Basic Pattern==========" +"<br>")
+
+for ( let i =0;i<n;i++){
+    for (let j=1;j<=n;j++){
+        document.write("*")
+
+    }    document.write("<br>")
+
+}
+// output is : ****  
+//             ****
+//             ****
+//             **** 
+        
+
+document.write("=====Right angle Pattern==========" +"<br>")
+
+for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+        document.write("*")
+    }
+    document.write("<br>")
+
+}
+
+document.write("=====Vertical opposite Right angle Pattern==========" +"<br>")
+
+for (let i = 1; i <= n; i++) {
+    for (let j = i; j <= n; j++) {
+        document.write("*")
+    }
+    document.write("<br>")
+
+
+}document.write("=====differnt way of writing Vertical opposite Right angle Pattern=========" +"<br>")
+
+
+for ( let i = n; i>=1;i--){
+    for (let j =1;j<=i;j++){
+                document.write("*");
+
+    }
+    document.write("<br>");
+
+}
+document.write("============trying daimond pattern===========");
+
+
+for (let i =1;i<=n;i++){
+    for(let j=1;j<=i;j++){
+        document.write(" ")
+        }document.write("<br>")
+    for(let k=n/2;k<n;k++){
+document.write("*")
+    }document.write("<br>")
+}
+    </script>
+</body>
+</html>

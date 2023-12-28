@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            /* text-align: center; */
+            align-items: center;
+            background-image: linear-gradient(to right, grey, white);
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            margin: 0%;
+            padding: 10px;
+            background-image: linear-gradient(to right, grey, white);
+            height: 550px;
+            width: 300px;
+        }
+
+        input {
+            background-color: rgb(202, 194, 194);
+            max-width: 100%;
+        }
+
+        .field-error {
+            font-size: 14px;
+            font-weight: 500;
+            color: orangered;
+            display: none;
+        }
+
+        .form-error {
+            font-size: 18px;
+            font-weight: 500;
+            color: orangered;
+            text-align: center;
+            display: none;
+
+        }
+    </style>
+
+</head>
+<script src="codeLab_4.js" type="module"></script>
+
+<body>
+    <main>
+        <h1>Sign up Form</h1>
+        <form action="">
+
+            <div class="form-field">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" maxlength="100%">
+            </div>
+            <div class="field-error" id="username-error"></div>
+
+            <div class="form-field">
+                <label for="password">Password :</label><br>
+                <input type="text" id="Password" maxlength="100%">
+            </div>
+            <div class="field-error" id="password-error"></div>
+
+            <div class="form-field">
+                <label for="ConfirmPassword">Confirm Password :</label><br>
+                <input type="text" id="Confirm-password" maxlength="100%">
+            </div>
+            <div class="field-error" id="Confirm-error"></div>
+
+
+            <div class="form-field">
+                <label for="country">Country</label><br>
+                <select id="country">
+                    <option value="0">Select Country</option>
+                </select>
+
+            </div>
+            <div class="field-error" id="country-error"></div>
+
+            <div class="form-field">
+                <label for="fullname">Fullname</label><br>
+                <input type="text" id="fullname" maxlength="100%">
+
+
+            </div>
+            <div class="field-error" id="fullname-error"></div>
+
+
+            <div class="form-field">
+                <label for="fav-color">What is your fav-color </label><br>
+                <input type="text" id="fav-color" maxlength="100%">
+
+
+            </div>
+            <div class="field-error" id="fav-color"></div>
+
+            <div class="form-field" id="passport-div">
+                <label>Do you have Passport</label><br>
+            </div>
+            <div>
+                <input type="radio" id="passport-yes" name="passport" value="true" />
+                <label for="passport-yes">Yes</label>
+            </div>
+
+            <div>
+                <input type="radio" id="passport-no" name="passport" value="false"/>
+                <label for="passport-no">No</label>
+            </div>
+            <div class="field-error" id="passport-error"></div>
+
+
+            <div class="form-field">
+                <label for="address">Address :</label><br>
+                <textarea name="" id="address" cols="30" rows="5"></textarea>
+            </div>
+            <div class="field-error" id="address-error"></div>
+            <div class="form-field">
+                <div></div>
+                <div>
+                    <input type="checkbox" id="send-newsletter">Send me monthly news letter
+                </div>
+            </div>
+
+            <div class="form-field">
+                <div>
+
+                </div>
+                <div>
+
+                    <input type="checkbox" id="accept-tnc">
+                    <label for="accept-tnc">
+                        I have read and accept the term and condition
+                    </label>
+                </div>
+            </div>
+
+            <div class="field-error" id="accept-tnc-error"></div>
+            <!-- agar form k field me me koi error raha toh sign up button k upar dikhata  -->
+
+            <div class="form-error" id="form-error-div"></div>
+            <!-- agar form me me koi error raha toh sign up button k  upar dikhata  -->
+
+            <div class="action-items">
+                <input type="text" id="form-validation-status">
+                <button id="sign-up" type="button">Sign Up</button>
+            </div>
+
+        </form>
+    </main>
+</body>
+
+</html>

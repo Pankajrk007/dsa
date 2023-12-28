@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Array maximum sum</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let arr = [5, 2, -10, 3, 4, 2, -1, 5, 5, -4, -7, 2];
+        let n = arr.length;
+        let MaxSumSubArray = 0;
+        let MaxSumSubArraySp = 0;
+        let MaxSumSubArrayEp = 0;
+        for (let sp = 0; sp < n; sp++) {
+            for (let ep = sp; ep < n; ep++) {
+                let SumOfThisArray = 0;
+                for (let i = sp; i <= ep; i++) {
+                    SumOfThisArray += arr[i];
+                    if (SumOfThisArray > MaxSumSubArray) {
+                        MaxSumSubArray = SumOfThisArray;
+                        MaxSumSubArraySp = sp;
+                        MaxSumSubArrayEp = ep;
+                    }
+                }
+            }
+        }
+
+        let s = "";
+        for (let i = MaxSumSubArraySp; i <= MaxSumSubArrayEp; i++) {
+            s += arr[i] + " ";
+
+        }
+        console.log(s)
+
+        //         Certainly! Let's break down the iterations in a table. We'll use `sp` for the starting point, `ep` for the ending point, and `SumOfThisArray` for the sum of the current subarray.
+
+        // | Iteration | `sp` | `ep` | `SumOfThisArray` | `MaxSumSubArray` | `MaxSumSubArraySp` | `MaxSumSubArrayEp` |
+        // |-----------|------|------|------------------|------------------|---------------------|---------------------|
+        // | 1         | 0    | 0    | 5                | 5                | 0                   | 0                   |
+        // | 2         | 0    | 1    | 7                | 7                | 0                   | 1                   |
+        // | 3         | 0    | 2    | -3               | 7                | 0                   | 1                   |
+        // | 4         | 0    | 3    | 0                | 7                | 0                   | 1                   |
+        // | 5         | 0    | 4    | 4                | 7                | 0                   | 1                   |
+        // | 6         | 0    | 5    | 6                | 7                | 0                   | 1                   |
+        // | 7         | 0    | 6    | 5                | 7                | 0                   | 1                   |
+        // | 8         | 0    | 7    | 10               | 10               | 0                   | 7                   |
+        // | 9         | 0    | 8    | 15               | 15               | 0                   | 8                   |
+        // | 10        | 0    | 9    | 11               | 15               | 0                   | 8                   |
+        // | ...       | ...  | ...  | ...              | ...              | ...                 | ...                 |
+        // | 66        | 11   | 11   | 2                | 15               | 0                   | 8                   |
+
+        // In the table, each row represents an iteration of the three nested loops. The columns show the values of `sp`, `ep`, `SumOfThisArray`, `MaxSumSubArray`, `MaxSumSubArraySp`, and `MaxSumSubArrayEp` after each iteration.
+
+        // The final result will be the subarray from index 0 to 8 (`[5, 2, -10, 3, 4, 2, -1, 5, 5]`), which has the maximum sum of 15.
+    </script>
+</body>
+
+</html>

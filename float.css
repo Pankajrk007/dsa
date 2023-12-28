@@ -1,0 +1,52 @@
+div.me{
+    background-color: coral;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
+
+h1.About{
+    color: blue;
+    background-color:transparent;
+    width: 150px;
+    text-align: left;
+    
+
+}
+
+
+p.Name{
+    text-align:right ;
+}
+
+p.Education{
+    text-decoration: underline red double;
+}
+
+
+
+p.Interest{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: brown;
+    text-shadow: 2px 3px salmon;
+}
+
+
+.container{
+    border: 1px solid red;
+   margin: 10px 500px 20px 5px;
+    padding: 0px;
+    background-color: rgb(74, 138, 194);
+}
+.container,h1{
+    color: rgb(61, 233, 233);
+    width: 220px;
+}
+
+p.roman{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(7, 94, 94);
+    width: 220px;
+}

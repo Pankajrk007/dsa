@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: black;
+            color: #333;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAEsCAMAAABgwwj8AAAAZlBMVEUAAAD///9+fn6JiYmjo6OZmZlgYGDr6+vh4eEYGBiurq78/PyGhoZOTk4oKCjY2NgcHBy5ubnT09PJyclubm5zc3M6Ojr19fVWVlYwMDBnZ2dSUlJBQUGhoaFJSUmpqanExMSUlJSvvUDaAAABo0lEQVR4nO3Xy3KiUBRA0Xs0DSYmIaAR81Lz/z8ZxEf3pMFBV18Gaw3wSmnVLqDgkBIAAAAAAAAAAAAAAAAAAAAAAAAAAADwnz3nDhi3eU2paCMecoeMaKKMecxTWsxzpwyqFik9xq9utV7kbhmyjftu25/13TJzy6BZe10+lhk7Rr3F9rIs65who2bxdFrcxcTvULOYHT8e4z13yZh11Mfj+ZG7Y9xn21bLt9wVN9mvXnInwI2Kr1nuhJvso4puNtnl7hizi01KdRmx3OROGbZfHbeHOs0nPaB0idcpv3nK2fE3L8V5HqlXl13NOlfMgDqiH/G7AeUyO29jao+q7hH/EOt0H0X/dXk6kB/n8MmYdcey6Ru/m9OO/pB+Ta1zF6/PRdO/032eX0lW5V0d5XboXxkcquO2H/DeLldnXTbTezYtfp/hXTvwu+wWX9flvMnYMWpVXZfV9M73H4rzTSmlTWQNGfUQ5+Fjsc8bMmp/eVfOHTKqaMvX7hKY9BV6Nm8jDrkjbvP+nbsAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/r0fBsUJ2gGhme8AAAAASUVORK5CYII=);
+
+            background-repeat: repeat-y;
+
+            background-size: contain;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0%;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            margin: 10px;
+
+        }
+
+        li {
+
+            display: grid;
+            float: right;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+
+        }
+
+        nav {
+
+
+            width: 100%;
+            height: 80px;
+            background-color: grey;
+            border: 1px dashed crimson;
+        }
+
+        .school {
+            display: grid;
+            float: left;
+            margin: 0%;
+            padding: 0%;
+            border: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #header {
+            margin: auto;
+            height: 40px;
+            display: block;
+
+            align-items: center;
+            text-align: center;
+        }
+
+        #me {
+            padding: 10px;
+
+        }
+
+        #you {
+            padding: 10px;
+        }
+
+        .xyz {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="you">
+        <nav>
+
+            <ul id="nav_content">
+                <li class="school">
+                    <h1>My school</h1>
+                </li>
+
+
+
+            </ul>
+            <li>Contact</li>
+            <li>Photo</li>
+            <li>Friends</li>
+            <li>Home</li>
+
+
+        </nav>
+        <br>
+        <br>
+        <br><br>
+
+
+        <br>
+
+
+
+    </div>
+    <div id="header">
+        <h1>Its me Rkk</h1>
+        <button id="you">Dont click</button>
+        <button id="me">Click me </button>
+    </div>
+
+    <p id="intro">Introduction to JavaScripts</p>
+    <p id="p1"></p>
+    <p id="heading"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <script>
+
+document.getElementById('p1').innerHTML="Hello Friends";
+document.getElementById('p1').style.color="green";
+document.getElementById('intro').style.fontSize="35px";
+document.getElementById('p1').style.backgroundColor="orange";
+document.getElementById('p1').style.padding="20pz";
+document.getElementById("pq").style.border="2px solid red";
+document.getElementById('heading').innerHTML="First step to Java script";
+document.body.style.backgroundColor="lightyellow";
+
+let mob=['apple','sony','oppo'];
+document.getElementById('p5').innerHTML='mob';
+
+        var element;
+        document.getElementById('you').addEventListener('click', raana);
+        function raana() {
+            for (var a = 1; a < 5; a++) {
+                document.write("You can do it " + "<br>")
+
+
+            }
+
+        }
+        document.getElementById('you').style.background = "#666";
+        document.getElementById('you').style.borderRadius = '20%';
+        document.getElementById('me').style.borderRadius = '20%';
+        document.getElementById('me').addEventListener('click', rana);
+        function rana() {
+            document.write("You have to do it");
+
+        }
+
+        document.getElementById('header').addEventListener("mouseover", pankaj);
+        function pankaj() {
+            document.getElementById('header').classList.add('xyz');
+
+        }
+      
+
+
+var b = document.getElementById('header').firstElementChild;
+var b = document.getElementById('li').firstElementChild;
+console.log(b)
+    </script>
+    <br>
+   
+
+</body>
+
+</html>

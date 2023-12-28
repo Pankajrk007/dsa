@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function objext</title>
+</head>
+
+<body>
+
+    <script>
+        var a = {
+            realname: "Pankaj",
+            nickname: "Rana",
+            City: " Akola",
+            email: "hisexy@gmail.com",
+            // hum object k andar array bhi likh sakhte hai
+            favSport: ["Criket", "Hockey", "Football", "ludo"],
+            // hum object k andar function bhi le sakte hai ex: 
+            Salary: function () {
+                return 25000
+            },
+            name: function () {
+                return this.City
+            }
+
+        }
+
+        document.write(a.favSport[1] + " ")
+        document.write(a.Salary())
+        document.write(a.name())
+    </script>
+
+    <br>
+
+    <script>
+
+        var person = new Object();
+        person.myname = "pankaj";
+        person.yourname = "rana";
+        document.write(person.myname)
+    </script>
+
+
+    <script>
+        var student =
+
+            [
+                { name: 'rahul', age: 12 },
+                { name: 'ram', age: 52 },
+                { name: "karan", age: '63' }
+            ];
+
+        console.log(student);
+
+        for (var a = 0; a < student.length; a++) {
+            document.write("<br>" + student[a].name + student[a].age);
+        }
+    </script>
+    <br>
+    <br>
+
+    <!-- for in loop -->
+    <script>
+
+        var you = {
+            name: "rahul",
+            city: "akola",
+            state: "maharashtra"
+
+        };
+
+        for (var me in you) {
+            document.write(me + " " + you[me] + "<br>")
+        }
+    </script>
+
+
+    <script>
+
+        var ary = [11, 444, 55, 44];
+        var b = any.map(test);
+        function test() {
+
+        }
+    </script>
+
+    <br>
+    <br>
+    <script>
+
+        var a = {
+            first_gf: 'Prachita',
+            second_gf: 'Priya',
+            third_gf: 'Rachna',
+            fourth_gf: 'Poonam',
+            fifth_gf: 'Pranjali',
+            state: {
+                city: 'akola',
+                tq: 'akolal',
+            },
+            favstar: ['sk', 'dk', 'ok'],
+            last_gf: function () {
+                return "wife";
+            },
+
+            same_clg_gf: function () {
+                return this.fourth_gf + " and " + this.fifth_gf + "<br>";
+            },
+
+        }
+        console.log(a);
+        //  document.write(a.favstar[1] +"<br>");
+        //  document.write(a.last_gf());
+        document.write(a.same_clg_gf());
+        document.write(a.state.city);
+        document.write(a.last_gf());
+        document.write(" new java script")
+
+
+    </script>
+
+
+    <script>
+        var a = new Object();
+        a.per = "o";
+        a.pers = 'ok';
+        a.perso = 'oka';
+        a.person = 'okay';
+        document.write(a.perso);
+
+    </script>
+
+    <br>
+    <br>
+    <script>
+
+        var a = [
+            { name: "rahul", age: 15 },
+            { name: "sahul", age: 15 },
+            { name: "rana", age: 15 },
+        ]
+
+        // document.write([a].name)
+
+        for (var b = 0; b < a.length; b++) {
+            document.write(a[b].name + " " + a[b].age + '<br>')
+        }
+    </script>
+
+
+    <script>
+        const z = [10, 20, 30, 10];
+        z[1] = 654;
+        console.log(z);       
+    </script>
+
+    <script>
+        const v = {
+            name: 'suraj',
+            age: 50,
+
+        };
+        v.name = "chand";
+
+        console.log(v);
+    </script>
+
+    <script>
+        const profile = {
+            name: ' pankaj',
+            class: 'last year',
+            field: 'Engineering',
+            job: 'US IT RECRUITER',
+
+        };
+        for (var rana in profile) {
+            document.write(rana + ":-" + " " + profile[rana] + "<br>");
+        }
+
+
+    </script>
+
+    <br><br>
+    <!-- <script>
+var a= [11,4,9,65];
+var b = a.map(test);
+function test (x ){
+
+}
+</script> -->
+
+
+    <script>
+
+        const k = [
+            {
+                Neha: "Pizza",
+                Rahul: 'ice cream',
+                Ram: 'Burger',
+                Shyam: 'Spring Rolls'
+            }
+        ];
+
+        console.log(k);
+    </script>
+
+    <div id="show">
+
+    </div>
+
+    <script>
+        let students = {
+            name: ' Nitesh',
+            class: 'v',
+            status: 'Pass',
+            totalMarks: '100',
+
+        };
+
+        let original = 0;
+        function updatevariable(x) {
+            x = 10;
+        }
+
+
+        console.log('original value : ' + students.totalMarks);
+        updatevariable(students);
+        console.log('updated value : ' + students.totalMarks);
+
+    </script>
+
+
+    <script>
+
+        var studentss = {
+            Name: 'Rahul veram',
+            Class: 'vth',
+            Roll_no: 45,
+            Subject: 'English',
+            Marks: '56',
+
+        };
+
+        console.log(studentss);
+        alert(JSON.stringify(studentss, null, 4));
+        delete studentss.Class;
+        delete studentss.Roll_no;
+        console.log(studentss);
+        alert(JSON.stringify(studentss, null, 4));
+
+    </script>
+
+    <!-- <script>
+    function invert_key_value(obj){
+        var result ={};
+        var key= _keys(obj);
+        for (var i=0, length= keys.length;i< length; i++){
+result[obj [keys [i]]] = keys [i];
+        }
+        return result;
+
+    }
+    function _keys (obj) {
+        if (! isObject (obj)) 
+        return[];
+        
+        if (Object.keys)
+        return Object.keys(obj);
+        
+        var keys = [];
+        for ( var key in obj ) if (_.has (obj, key)) keys.push(key);
+        return keys ;
+}
+
+function isObject( obj){
+    var type = typeof obj;
+    return type === 'function' || type === 'object' && !!obj;
+}
+
+let obj = { Name: 'Virat', Sports : ' cricket', Age :33,};
+console.log(obj);
+alert (JSON.stringify (obj,null,4));
+let newobj=invert_key_value(obj);
+
+alert(JSON.stringify(newobj,null,4));
+console.log(newobj);
+</script> -->
+
+
+    <script>
+        function invert_key_value(obj) {
+            var result = {};
+            var keys = _keys(obj);
+            for (var i = 0, length = keys.length; i < length; i++) {
+                result[obj[keys[i]]] = keys[i];
+            }
+            return result;
+        } function _keys(obj) { if (!isObject(obj)) return []; if (Object.keys) return Object.keys(obj); var keys = []; for (var key in obj) if (_.has(obj, key)) keys.push(key); return keys; } function isObject(obj) { var type = typeof obj; return type === 'function' || type === 'object' && !!obj; } let obj = { Name: "Virat", Sports: "Cricket", Age: "33" }; console.log(obj); alert(JSON.stringify(obj, null, 4)); let newobj = invert_key_value(obj); 5
+        alert(JSON.stringify(newobj, null, 4)); console.log(newobj);
+    </script>
+
+    <script>
+        function hasKey(obj, key) {
+            return obj != null && hasOwnProperty.call(obj, key);
+        }
+
+        let obje = { Virat: "33", Rohit: "35", Dhoni: "41" };
+        alert(hasKey(obj, 'Virat'));
+        console.log(hasKey(obj, 'Virat'));
+    </script>
+
+
+    <script>
+        function baby(priya) {
+            console.log("Darling" + priya);
+        }
+        let priya = prompt("Enter your name");
+        baby(priya);
+    </script>
+
+
+</body>
+
+</html>

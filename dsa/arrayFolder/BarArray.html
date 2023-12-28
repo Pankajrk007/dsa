@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRay BAr</title>
+</head>
+
+<body>
+
+    // first we will heightest number in array then we will make the bar using heightest number
+    <script>
+        let arr = [1, 6, 2, 8, 1, 7, 2, 8];  //first we will find maximum number 
+        let max = 0;                    //assume max value of arr is 0
+        for (i = 0; i < arr.length; i++) {    //check the array
+            if (arr[i] > max)               // array me koi i ki value max se badi badi hai toh usko max banado
+                max = arr[i];              // vo arry me max value milegi usko max bana diya
+        }
+
+        let s = "";
+
+        for (let k = max; k >= 1; k--) {    // aaray ki hightest value se lowest par aayege matlab yaha 8 ko first line me print karenge
+
+            for (let j =0;j<arr.length;j++){
+                if (arr[j]>=k)                 //[1, 6, 2, 8, 1, 7, 2, 8] >= 8   first iteration// yaha j=0-8 tak check karega aur ajsie he arr j=8 aur max same hote star print hoga
+               { s+="*";}
+            else {s+=" "};
+            }
+            s+="\n";
+
+        }
+console.log(s);
+    </script>
+</body>
+
+</html>

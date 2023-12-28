@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function color (str){
+regexp =  /^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
+if (regexp.test(str)){
+return true;
+}else{
+    return false
+}
+        
+}
+console.log(color('#333'))
+console.log(color('#7777'))
+
+
+</script>
+</body>
+</html>

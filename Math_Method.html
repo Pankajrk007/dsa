@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Method</title>
+</head>
+<body>
+    
+ <script>
+       var a = Math.ceil(5.3);
+       document.write(a + "<br>");
+    //    ye apko upper value dega 
+
+       var a = Math.ceil(-5.3);
+       document.write(a + "<br>");
+    //    ye apko upper value dega 
+
+
+       var a = Math.floor(5.3);
+       document.write(a + "<br>");
+  //    ye apko lower value dega 
+
+
+       var a = Math.floor(-5.3);
+       document.write(a + "<br>");
+         //    ye apko lower value dega 
+
+      
+       var a = Math.round(5.3);
+       document.write(a + "<br>");
+    //    agar value x+.50 > then upper value x+50 < then lower value 
+
+
+       var a = Math.round(5.56);
+       document.write(a + "<br>");
+           //    agar value x+.50 > then upper value x+50 < then lower value 
+
+      
+       var a = Math.max(5,3);
+       document.write(a + "<br>");
+// maximum value dega 
+
+       var a = Math.min(5,3);
+       document.write(a + "<br>");
+       // manimum value dega 
+
+
+       var a = Math.random();
+       document.write(a + "<br>");
+// ye apko 0-1 k bich me number dega (0.24324) or  (0.4546) kuch b dega o-1 k bich me 
+
+       var a = (Math.random()*30 )+1;
+       document.write(a + "<br>");
+// suppose here we want between 1-30 
+// agar apko number kisi 2 number k bich me chaheye to apko greater number se multiply karna hoga 
+
+
+var a = Math.floor(Math.random()*30 )+1;
+       document.write(a + "<br>");
+
+    //    but yaha hume 2 number k bich ka number to mil raha hai par vo decimal point me mil raha hai 
+    // toh hum Math.floor ka use kar sakte hai 
+    // jo apko nearest smallest value dega 
+
+    // Math.floor k baad ye ek formula ban jata hai. 
+     
+
+    var a = Math.trunc(4.33);
+    document.write(a)
+    // ye apko direct integer ki value dega 
+    // . dot k baad ka nhi count karega 
+ </script>
+</body>
+</html>

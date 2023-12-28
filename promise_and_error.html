@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise and error</title>
+</head>
+<body>
+    <script>
+        var Promise = new Promise(function(resolve,reject,received){
+            const x = "Rana";
+            const y = "Rana";
+            if (x===y){
+                resolve()
+            }else{
+                reject()
+            }
+            if (x==y) {
+                received()
+            } else {
+                error()
+            }
+
+            
+        });
+        Promise.then(function(){ //yaha call karnae k  liye promise name k varible ko liya fir usme then method liya fir function likha fir usme jo code karna hai vo kiya
+            console.log("success") // prosmis resolve hone k baad ye value  print karega
+        },function(){ // promise. then me 2 paramter function hote hai ye dusra function na likhe toh b chalta hai
+            console.log("received"); // prosmis receive hone k baad ye value  print karega
+        }
+        ).catch(function(){ // catch error ko catch karta hai agar koi error aata hai toh
+            console.log("reject")
+        });
+    </script>
+<!-- promise asynchronous function me use hota hai -->
+
+<script>
+    const a = "Rana";
+    const b = "Rna";
+    try{
+     if(a !==b){
+throw new Error("a and b are not equal")
+     }  else{
+        console.log("a and b are same")
+     } 
+    }
+    catch(err){
+console.log(err)
+}
+</script>
+<!-- try synchronous function me use hota hai -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+    <script>
+       
+    function sum(name,education,...rest_argument){
+        document.write(`Heloo ${name} your education is ${education} and you got : `);
+// argumens ki addition perform karne hum for in loop ka use karenge 
+
+let sum = 0;
+for (let i in rest_argument){
+sum += rest_argument[i];
+
+
+}
+document.write(sum +" <br>")
+
+    }
+    let array =[10,20,30,40,50,99]; 
+    // bas last me array likhna hoga 
+    sum("Pankaj","BE",...array);
+    // aur calll karte waqt array name k aage ... 3 dot lagane hoge  
+    </script>
+
+    <br>
+
+    <script>
+        var kk = [20,3,45,5,6];
+       var bb=[8.0,8,6,5,8];
+       var cc= [...kk,...bb];
+       console.log(cc)
+var dd = kk.concat(bb);
+console.log(...dd);
+    </script>
+</body>
+</html>

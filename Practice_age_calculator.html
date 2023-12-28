@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>
+                Age calculator
+            </h1>
+        </div>
+        <div class="row" id="dob">
+            <div id="date" class="col-md-3">
+                <input type="text" id="birth_dates" placeholder="Enter date">
+            </div>
+            <div id="month" class="col-md-3">
+                <input type="text" id="birth_months" placeholder="Enter Months">
+            </div>
+            <div id="year" class="col-md-3">
+                <input type="text" id="birth_years" placeholder="Enter Year">
+                <br>
+                <button id="calculate"> Calculate Age</button>
+
+            </div>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+    <script>
+        document.addEventListener(DOMContentLoaded, function () {
+            var dob = document.getElementById('dob');
+            dob.addEventListener('click', function (event) {
+                event.preventDefault;
+                var db = document.getElementById('birth_dates').value;
+                var mb = document.getElementById('birth_months').value;
+                var yb = document.getElementById('birth_years').value;
+                var todaysdate = new Date();
+                var todaysmonth = 1+date.getMonth();
+                var todaysyear = date.getFullYear();
+
+                var monthDays =[31,28,31,30,31,30,31,31,30,31,30,31];
+
+                if (db>todaysdate){
+                    todaysdate =todaysdate+monthDays[todaysmonth-1]
+                    todaysmonth = todaysmonth-1;
+
+                }
+                if(mb>todaysmonth){
+                    todaysmonth=todaysmonth+12;
+                    todaysyear=todaysyear-1;
+                }
+                var d= todaysdate-db;
+                var m =todaysdate-mb;
+                var y =todaysyear-yb;
+                document.getElementById('dob').innerHTML=d,m,y
+            })
+        })
+    </script>
+</body>
+
+</html>

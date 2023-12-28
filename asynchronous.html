@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100;
+            background-image: linear-gradient(to right, rgb(113, 196, 209), rgb(102, 89, 187));
+            font-family: "montserrat", "helvetica Neue", "sans-serif";
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #image {
+            width: 350px;
+            height: 350px;
+            border: 5px solide #fff;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: asure;">Random Image Generator</h1>
+        <img id="image"> <!--ek image tag liya jisme random photo dikhege with th help of id -->
+    </div>
+
+    <script>
+        const url = 'https://source.unsplash.com/random' //varible me url store kiya hai jisme random photo hai
+        const img = document.getElementById("image"); // yaha iamge nam k id ko target kar rhe hai 
+        const getImage = async (url) => {  // async method use kar rhe hai arrow function par //aur usme ek parameter diya url naam ka
+            return await fetch(url).then(res => res.url) //pehle yaha fetch kar rhe fir fetch ko await method laga rhe hai fir usko retuen kar rhe hai
+        } //fetch ek promise aur response dega islye then ka use kiya arrow f ka use kiya 
+        const img_url = getImage; //naye variable getimage ki value store ki 
+        getImage(url).then(result => {
+            img.setAttribute('src', result)
+        });
+    </script>
+
+    <script>
+        //        async function test(){
+        //      document.write(" 2 : message" +"<br>");
+        //     await document.write(" 3 : message"+"<br>");
+        //     // await karne k baad program yaha wait karega aur jo function call k baad ka code hoga uspe work karega
+        //     // fir vo return await pr aayega aur check karega await ka kam pura huwa hai ya nahi 
+        //     // agar huwa hai toh await k baad k code ko run karega 
+        //          document.write(" 4 : message"+"<br>");
+        //          document.write(" 1 : message"+"<br>");
+
+        //  }
+        //  test();
+        //         document.write(" 5 : message"+"<br>");
+
+
+        //    </script>
+
+    <h2>Write a javascript file to make a random image generator using an API call?</h2>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

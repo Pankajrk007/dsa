@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body>
+    <h4>Write a Program to count the number of digits in a number N using a recursivemethod</h4>
+
+    <script>
+    function countDigit(n){
+        let count = 0;
+        while(n!==0){
+            n= Math.floor(n/10);  // math.floor humko lowesst value deta hai ,par divide by 10 karne se ek ek value kam hogi aur agar decimal me value aayi toh math floor decimal ko nikal dega
+        }
+    }
+
+</script>
+
+<!-- 
+Certainly! Let's break down each line of the code and then create a table for the iterations:
+
+```javascript
+function countDigit(n) {
+    let count = 0; // Initialize a variable to count the digits
+    while (n != 0) {
+        n = Math.floor(n / 10); // Remove the last digit by dividing by 10
+        ++count; // Increment the count for each digit
+    }
+    return count; // Return the final count
+}
+
+let n = 65646466; // The number for which we want to count digits
+document.write("Number of digit is: " + countDigit(n));
+```
+
+Now, let's create a table to show the breakdown of each iteration:
+
+| Iteration | Current Number (n) | Updated Number (n/10) | Current Count |
+|-----------|---------------------|------------------------|---------------|
+| 1         | 65646466            | 6564646                | 1             |
+| 2         | 6564646             | 656464                 | 2             |
+| 3         | 656464              | 65646                  | 3             |
+| 4         | 65646               | 6564                   | 4             |
+| 5         | 6564                | 656                    | 5             |
+| 6         | 656                 | 65                     | 6             |
+| 7         | 65                  | 6                      | 7             |
+| 8         | 6                   | 0                      | 8             |
+
+In each iteration, the code divides the number `n` by 10 using `Math.floor(n / 10)`, effectively removing the last digit, and increments the count. This continues until `n` becomes 0. The final count represents the number of digits in the original number. -->
+
+</body>
+</html>

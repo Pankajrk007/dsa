@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event  practise</title>
+</head>
+<body>
+    <!-- <h1>
+        Javascript Events
+    </h1>
+    <form>
+        <input type="button" onclick="l_event()" value="who's this?">
+
+    </form>
+
+<script>
+    function l_event(){
+        document.write(" hello baby")
+    }
+</script> -->
+
+
+<h2 id="header">
+    Javascript Event
+</h2>
+
+<p onmouseover="mouse()" >keep cursor over me</p>
+
+<div id="p"></div>
+<div id="p2"></div>
+<script>
+
+
+let mobile = ['one','toe','three']
+
+document.getElementById('p').innerHTML=mobile;
+
+mobile[1]="four";
+mobile.push="four";
+document.getElementById('p2').innerHTML=mobile;
+
+
+    function mouse(){
+        document.write("Mittu")
+    }
+</script>
+
+
+<h2>Enter something here</h2>
+
+<!-- 
+<input type="text" id="input1" onfocus="FocusEvent()" >
+<script>
+function FocusEvent(){
+    document.getElementById("input1").style.background="silver";
+}
+</script> -->
+
+<!-- 
+<input type="text" id="here" onkeydown="key()">
+
+<script>
+    function key(){
+        alert("hello sexy!");
+    }
+</script> -->
+<script>
+    var now = newDate();
+    document.getElementById('header').addEventListener('click',name);
+    function name (){
+      document.write(now.getDates())
+    }
+
+
+</script>
+</body>
+</html>
